@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>音频操作</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<!--[if (!IE)|(gte IE 10)]><!-->
+<style>
+	#ps,#pp{color: tomato; cursor: pointer; font-weight: bold;}
+</style>
+<script>
+//Copyright By Sunplace
+//播放、停止
+function playstop()
+{
+var player0=document.getElementById('m0');
+var player1=document.getElementById('m1');
+if(player0.paused==false||player1.paused==false)//正在播放
+	{
+		return false;
+	}
+var player=document.getElementById('m2');
+var tips=document.getElementById('ps');
+var time2=document.getElementById('t2');
+if(player.paused)
+{
+	player.play();
+	tips.innerHTML="[停止]";
+	var interval = setInterval(function() { 
+	time2.innerHTML=Math.floor(player.currentTime);             
+    },100);
+	
+
+}
+else
+{
+	player.pause();
+	player.currentTime= 0.0; 	
+    tips.innerHTML="[播放]";
+	time2.innerHTML=Math.floor(player.currentTime);              
+   
+	
+}
+}
+//播放、暂停
+	function playpause()
+{
+var player0=document.getElementById('m0');
+var player2=document.getElementById('m2');
+if(player0.paused==false||player2.paused==false)//正在播放
+	{
+		return false;
+	}
+var player=document.getElementById('m1');
+var tips=document.getElementById('pp');
+var time1=document.getElementById('t1');
+if(player.paused)
+{
+	player.play();
+	tips.innerHTML="[暂停]";
+	var interval = setInterval(function() { 
+	time1.innerHTML=Math.floor(player.currentTime);             
+    },100);
+	
+
+}
+else
+{
+	player.pause();	
+    tips.innerHTML="[播放]";
+	time1.innerHTML=Math.floor(player.currentTime);  
+  
+	
+}
+}
+</script><!--<![endif]-->
+</head>
+<body>
+<!--[if (!IE)|(gte IE 10)]><!-->
+<div class="desc">常规插入:<br/>
+<audio id="m0"  src="media/17/music.mp3" controls></audio><br/>
+播放/暂停：<br/>
+<audio id="m1"  src="media/17/music.mp3"></audio>
+<span id="pp" onClick="playpause();">[播放]</span>，播放到<span id="t1">0</span>s<br/>
+播放/停止：<br/>
+<audio id="m2" src="media/17/music.mp3"></audio>
+<span id="ps" onClick="playstop();">[播放]</span>，播放到<span id="t2">0</span>s
+</div>
+</body>
+<!--<![endif]--><!--[if lt IE 10]>
+  <body>
+    <div class="log">你正在使用低于10的IE浏览本页，请升级到IE10或者更换其他浏览器。</div>
+  </body>
+<![endif]-->
+</html>

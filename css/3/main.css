@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* Copyright By Sunplace */
+li{padding:0;margin:0;}
+.menu{width:100%;height:33px;background:#222f3b; display:table; z-index: 999;}
+.menu .nav{width:1024px;height:33px;margin:0 auto; }
+.menu .nav li{width: 100px; float:left;list-style:none;list-style-type: none;text-align: center;}
+.menu .nav li a{display:block;height:33px;line-height:33px;color:white;text-decoration:none;font-size: 14px;}
+.menu .nav li a:hover,.menu .nav li a.current{background:#627d93;color:#fff;}
+.menu .nav li .box{width:100%;height:33px;position:absolute;top:33px;left:0;background:#627d93;display:none;line-height: 33px; margin: 0 auto;}
+.menu .nav li .box a{display:block;height:33px;float:left;color:#fff;line-height:33px;border:none;background:none; font-size: 14px;padding-left: 10px; padding-right: 10px; text-decoration: none;}
+.box a:hover{color: #222F3B !important;font-weight: bolder;}
+.tran{position: absolute; top:33px; right:0px;background-color: #627d93;text-align: center;height: 33px; width: 300px;}
+.tran a{margin:0px !important;width: 100px;float: right;padding: 0px !important;}
+.tran a:hover{background-color:#99AFC1 !important;}
+.rdnav{position: absolute; top:33px;background-color: #627D93;width:100px;margin: 0px !important;}
+.rdnav a{width: 100px;padding: 0 !important;}	
+.rdnav a:hover{background-color:#99AFC1 !important;}
+.curlang{background:#627d93;}

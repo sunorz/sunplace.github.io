@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>搜索框</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<style>
+span{float: left;display: inline-block;height: 32px;}
+input{border: 0 none;outline: none;}      
+.span1{width: 150px;position: relative;border:#cccccc solid 1px;}
+.sinput{height: 24px;width: 140px;padding: 4px 5px;position: absolute;top: 0;}
+.sinput2{height:18px;width: 140px;padding: 0px 3px;position: absolute;font-size: smaller;}
+.button{height: 32px;border: 0 none; background-color: #cccccc; outline: none;cursor: pointer;width:38px;}
+.icon{height: 24px;}
+.icon2{height: 15px;}
+.span2{border:#cccccc solid 1px;}
+.span3{width: 180px;position: relative;border:#cccccc solid 1px;height: 18px;border-radius: 20px;padding-left: 10px;padding-top:3px;padding-bottom: 3px;background-color: white;}
+.button2{height: 18px;border: 0 none;outline: none;cursor: pointer;background-color: transparent;}
+</style>
+</head>
+<!--[if (!IE)|(gte IE 10)]><!-->
+<body>
+<!--Copyright By Sunplace-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">
+<symbol id="search" viewBox="0 0 116 108">
+	<path d="M65.4,14.4c-16-13.2-39.7-10.8-52.9,5.2C-0.7,35.6,1.7,59.3,17.7,72.5C31.5,83.8,51,83.7,64.5,73.2L99,101.5
+		c3.5,2.9,8.6,2.4,11.5-1.1c2.9-3.5,2.4-8.6-1.1-11.5L75,60.7C83,45.2,79.4,25.8,65.4,14.4z M60.7,59.1C52,69.7,36.4,71.3,25.8,62.6
+		c-10.6-8.7-12.1-24.3-3.4-34.9c8.7-10.6,24.3-12.1,34.9-3.4C67.9,32.9,69.4,48.6,60.7,59.1z"/>
+</symbol>	
+</svg>
+<div style="width: 1024px;margin: 0 auto;">
+<div class="desc">样式一</div>
+<form id="sh" action="inc/form.php" method="post">
+        <span class="span1">
+            <input type="text"  name="keywords" class="sinput"  maxlength="20" placeholder="请输入待搜索的关键
+
+字…" autocomplete="off">
+        </span>
+        <span class="span2">
+			<button type="submit" class="button"><svg viewBox="0 0 300 300" class="icon" fill="#fff">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
+</svg></button>
+        </span>
+	</form>
+	<div style="clear: both;height: 20px;"></div>
+	<div class="desc">样式二</div>
+	<form id="sh2" action="inc/form.php" method="post">
+  <span class="span3"><input name="keywords_2" class="sinput2" type="text" style="" placeholder="请输入待搜索的关键
+
+字…" autocomplete="off"><button class="button2" style="float: right;"><svg viewBox="0 0 300 300" class="icon2" fill="#cccccc">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
+	  </svg></button></span></form>
+	  </div>
+<div class="clear"></div>
+<div class="log">更新内容：<br><span style="float:none;display:inline;">1.1</span>&nbsp;at&nbsp;Jun.5th,2017&nbsp;&nbsp;#修复了在IE下按钮的长度。</div>
+</body><!--<![endif]--><!--[if lt IE 10]>
+  <body>
+    <div class="log">你正在使用低于10的IE浏览本页，请升级到IE10或者更换其他浏览器。</div>
+  </body>
+<![endif]-->
+</html>

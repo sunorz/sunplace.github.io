@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图片无缝滚动</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<style>
+a:link,a:visited,a:active{color:#000;text-decoration:none;}
+a:hover{color:red;text-decoration:none;}
+td{background-color:rgb(62, 201, 195);}
+</style>
+</head>
+
+<body>
+<!--Copyright By Sunplace-->
+	
+<div id="demo" style="overflow:hidden;width:450px;margin:30px auto;">
+<table border="0" align="center" cellpadding="0" cellspacing="0" cellspace="0" >
+<tr><td valign="top" id="marquePic1">
+<table width="100%" border="0"  cellpadding="0" cellspacing="0" cellspace="0" >
+<tr>
+<td align="center"><a href="/"><img src="imgs/8/img0.jpg" width="450px" height="300px" border="0"></a><div style="padding: 10px;"><a href="/">链接1</a></div></td>
+<td align="center"><a href="/"><img src="imgs/8/img1.jpg" width="450px" height="300px" border="0"></a><div style="padding: 10px;"><a href="/">链接2</a></div></td>
+<td align="center"><a href="/"><img src="imgs/8/img2.jpg" width="450px" height="300px" border="0"></a><div style="padding: 10px;"><a href="/">链接3</a></div></td>
+<td align="center"><a href="/"><img src="imgs/8/img3.jpg" width="450px" height="300px" border="0"></a><div style="padding: 10px;"><a href="/">链接4</a></div></td>
+<td align="center"><a href="/"><img src="imgs/8/img4.jpg" width="450px" height="300px" border="0"></a><div style="padding: 10px;"><a href="/">链接5</a></div></td>
+<td align="center"><a href="/"><img src="imgs/8/img5.jpg" width="450px" height="300px" border="0"></a><div style="padding: 10px;"><a href="/">链接6</a></div></td>
+<td align="center"><a href="/"><img src="imgs/8/img6.jpg" width="450px" height="300px" border="0"></a><div style="padding: 10px;"><a href="/">链接7</a></div></td>
+<td align="center"><a href="/"><img src="imgs/8/img7.jpg" width="450px" height="300px" border="0"></a><div style="padding: 10px;"><a href="/">链接8</a></div></td>
+
+</tr>
+</table>
+</td><td id="marquePic2"></td></tr>
+</table></div>
+<script>
+var speed=50 
+marquePic2.innerHTML=marquePic1.innerHTML 
+function Marquee(){ 
+if(demo.scrollLeft>=marquePic1.scrollWidth){ 
+demo.scrollLeft=0 
+}else{ 
+demo.scrollLeft++ 
+} 
+} 
+var MyMar=setInterval(Marquee,speed) 
+demo.onmouseover=function() {clearInterval(MyMar)} 
+demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)} 
+</script>
+<div class="log">更新内容：<br/><span>1.1</span>&nbsp;at&nbsp;Dec.20th,2016&nbsp;&nbsp;#图片间距修改为无间距。</div>
+</body>
+</html>

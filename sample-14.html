@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>背景图片横向缩放</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<style>
+	body{margin:0;}
+	.mydiv{
+		background-size:100%;
+		background-image: url(imgs/8/img7.jpg);
+		background-repeat: no-repeat;
+		width: 100%;
+		box-sizing: border-box;
+		-webkit-box-sizing:border-box;
+        -moz-box-sizing: border-box;
+		/*其他样式*/
+		height: 500px;
+		margin-top: 30px;
+		color: #fff;
+		padding: 30px;
+	}
+</style>
+</head>
+<!--[if (!IE)|(gte IE 10)]><!-->
+<body>
+<div class="mydiv">
+图片会失真。
+</div>	
+<div class="desc">
+	<p>原图尺寸：450*300</p>
+<img src="imgs/8/img7.jpg">
+</div>
+</body><!--<![endif]--><!--[if lt IE 10]>
+  <body>
+    <div class="log">你正在使用低于10的IE浏览本页，请升级到IE10或者更换其他浏览器。</div>
+  </body>
+<![endif]-->
+</html>

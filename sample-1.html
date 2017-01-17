@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>动态世界时钟</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<style>
+	#time{margin: 10px auto;line-height: 2;width: 1024px;}
+</style>
+</head>
+<!--[if (!IE)|(gte IE 10)]><!-->
+<body>
+<!--Copyright By Sunplace-->
+	<script src="js/jquery-3.1.1.min.js"></script>
+<script>
+	$(function() {    
+        //定时请求刷新  
+        setInterval(showtime,1000);   
+    }); 
+	function showtime(){
+$.ajax({type:"OPTIONS",url:"/",complete:function(x){
+	var servdate = x.getResponseHeader("Date");
+	var sd = new Date(servdate);
+	var serdtime = sd.getTime();
+	var offset=9;//时区
+	var utc=serdtime+sd.getTimezoneOffset()*60000;
+	var utc9=utc+offset*3600000;
+	var jptime = new Date(utc9);
+	//本机时间
+	var machtime = new Date();
+	//格式化时间
+var weekname=Array("日","一","二","三","四","五","六");//星期
+var chntime="格式化后的东京时间："+jptime.getFullYear()+"年"+(jptime.getMonth()+1)+"月"+jptime.getDate()+"日"+" "+jptime.getHours()+":"+pad(jptime.getMinutes(),2)+":"+pad(jptime.getSeconds(),2)+" "+"星期"+weekname[jptime.getDay()];
+	
+	var str="服务器时间："+sd.toLocaleString()+"<br/>"+"本机时间："+machtime.toLocaleString()+"<br/>"+"东京时间(UTC+9)："+jptime.toLocaleString()+"<br/>"+chntime;
+$("#time").html(str);	
+}});
+	}
+function pad(num, n) {  
+    var len = num.toString().length;  
+    while(len < n) {  
+        num = "0" + num;  
+        len++;  
+    }  
+    return num;  
+}  
+</script>
+<div style="padding:10px;">此程序依赖于服务器时间，若服务器时间不准确，请联系供应商或者弃用。</div>
+<div id="time">请等待...</div>
+	<div class="log">更新内容：<br/><span>1.1</span>&nbsp;at&nbsp;Dec.17th,2016&nbsp;&nbsp;#新增获取服务器Ajax。&nbsp;&nbsp;#格式化时间补零。<br/>
+<span>1.2</span>&nbsp;at&nbsp;Dec.18th,2016&nbsp;&nbsp;#修复星期显示不正确的问题。<br/>
+<span>1.2.1</span>&nbsp;at&nbsp;Dec.19th,2016&nbsp;&nbsp;#移除小时之前的零。</div>
+</body><!--<![endif]--><!--[if lt IE 10]>
+  <body>
+    <div class="log">你正在使用低于10的IE浏览本页，请升级到IE10或者更换其他浏览器。</div>
+  </body>
+<![endif]-->
+</html>

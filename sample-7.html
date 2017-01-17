@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>父层为relative没有高度的解决方法</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script>
+
+function psize(){
+var o=document.getElementById('wrap');
+var w=o.offsetHeight;
+
+
+var p=document.getElementById('son');
+var q=p.offsetHeight;
+
+o.style.height=100+q+'px';
+
+}
+	</script>
+</head>
+
+<body onLoad="psize()">
+<!--Copyright By Sunplace-->
+<div id="wrap" style="position:relative; background-color:#3EC9C3;">
+<div id="son" style="position:absolute; background-color:#B0CD08;color: white;padding: 10px;">子层中的内容。</div>
+</div>
+</body>
+</html>
