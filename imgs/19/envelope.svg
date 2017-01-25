@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 304 480" style="enable-background:new 0 0 304 480;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#D10D0D;}
+	.st1{fill:#8C0000;}
+	.st2{fill:#FFC50B;}
+	.st3{fill:#FF7C10;}
+	.st4{fill:#FF642E;}
+	.st5{fill:#FF0606;}
+</style>
+<rect class="st0" width="304" height="480"/>
+<polyline class="st1" points="0,0 304,0 304,480 "/>
+<polygon class="st2" points="280,456 24,456 24,56 40,56 40,440 264,440 264,56 280,56 "/>
+<g>
+	<polygon class="st3" points="280,456 280,56 264,56 264,440 	"/>
+	<polyline class="st3" points="40,440 40,56 24,56 	"/>
+</g>
+<polygon class="st4" points="0,64.8 152,140 304,64.8 304,0 0,0 "/>
+<polyline class="st5" points="152,140.8 304,64.8 304,0 0,0 "/>
+<polyline class="st0" points="152,140.8 304,64.8 304,0 "/>
+<circle class="st2" cx="152" cy="282.4" r="82.4"/>
+<path class="st3" d="M152,200.8c45.6,0,82.4,36.8,82.4,82.4s-36.8,81.6-82.4,81.6"/>
+<rect x="122.3" y="253.1" transform="matrix(0.707 -0.7072 0.7072 0.707 -155.5763 190.6209)" class="st0" width="60" height="60"/>
+<polyline class="st1" points="152,240.8 194.4,282.4 152,324.8 "/>
+<g>
+	<circle class="st2" cx="152" cy="29.6" r="6.4"/>
+	<circle class="st2" cx="152" cy="62.4" r="6.4"/>
+	<circle class="st2" cx="152" cy="95.2" r="6.4"/>
+</g>
+<g>
+	<circle class="st1" cx="152" cy="226.4" r="5.6"/>
+	<circle class="st1" cx="152" cy="339.2" r="5.6"/>
+	<circle class="st1" cx="208" cy="282.4" r="5.6"/>
+	<circle class="st1" cx="96" cy="282.4" r="5.6"/>
+</g>
+</svg>
