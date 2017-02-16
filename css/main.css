@@ -8,7 +8,7 @@ body{font-family:Source Code Pro,"微软雅黑";margin:0;padding:0;background-co
 .tips-type{ background-color:#fff;display: table;width: 100%;}
 .clear{clear:both;}
 .odd-line{width: 25%;float: left;margin-top: 20px;line-height: 2.5;font-size: smaller;}
-.even-line{ background-color:#C0C0C0;width: 25%;float: left; margin-top: 20px;line-height: 2.5;font-size: smaller;}
+.even-line{ background-color:#B6DEBA;width: 25%;float: left; margin-top: 20px;line-height: 2.5;font-size: smaller;}
 a{color:#000;text-decoration: none;}
 a:hover{color:red;}
 .odd-line img,.even-line img{cursor: pointer;width: 1em;margin-right: 8px;}
