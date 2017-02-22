@@ -29,8 +29,8 @@ $.ajax({type:"OPTIONS",url:"/",complete:function(x){
 	//本机时间
 	var machtime = new Date();
 	//格式化时间
-var weekname=Array("日","一","二","三","四","五","六");//星期
-var chntime="格式化后的东京时间："+jptime.getFullYear()+"年"+(jptime.getMonth()+1)+"月"+jptime.getDate()+"日"+" "+jptime.getHours()+":"+pad(jptime.getMinutes(),2)+":"+pad(jptime.getSeconds(),2)+" "+"星期"+weekname[jptime.getDay()];
+var weekname=Array("日","月","火","水","木","金","土");//星期
+var chntime="格式化后的东京时间："+jptime.getFullYear()+"年"+(jptime.getMonth()+1)+"月"+jptime.getDate()+"日"+" "+jptime.getHours()+":"+pad(jptime.getMinutes(),2)+":"+pad(jptime.getSeconds(),2)+" "+weekname[jptime.getDay()]+"曜日";
 	
 	var str="服务器时间："+sd.toLocaleString()+"<br/>"+"本机时间："+machtime.toLocaleString()+"<br/>"+"东京时间(UTC+9)："+jptime.toLocaleString()+"<br/>"+chntime;
 $("#time").html(str);	
@@ -49,7 +49,8 @@ function pad(num, n) {
 <div id="time">请等待...</div>
 	<div class="log">更新内容：<br/><span>1.1</span>&nbsp;at&nbsp;Dec.17th,2016&nbsp;&nbsp;#新增获取服务器Ajax。&nbsp;&nbsp;#格式化时间补零。<br/>
 <span>1.2</span>&nbsp;at&nbsp;Dec.18th,2016&nbsp;&nbsp;#修复星期显示不正确的问题。<br/>
-<span>1.2.1</span>&nbsp;at&nbsp;Dec.19th,2016&nbsp;&nbsp;#移除小时之前的零。</div>
+<span>1.2.1</span>&nbsp;at&nbsp;Dec.19th,2016&nbsp;&nbsp;#移除小时之前的零。<br/>
+<span>1.2.2</span>&nbsp;at&nbsp;Feb.22nd,2017&nbsp;&nbsp;#将星期改为日文。</div>
 </body><!--<![endif]--><!--[if lt IE 10]>
   <body>
     <div class="log">你正在使用低于10的IE浏览本页，请升级到IE10或者更换其他浏览器。</div>
