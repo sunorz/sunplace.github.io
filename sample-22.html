@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>响应式导航</title>
+<link href="css/22/main.css" type="text/css" rel="stylesheet">
+<script src="js/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+<!--Copyright By Sunplace-->
+<script>
+$(document).ready(function() {
+$("#menu").click(function(){
+	$("nav ul li").not(".menu").slideToggle(500);
+	
+});
+
+});
+	window.onresize=function(){
+	if($(window).width()>600)
+		{
+			$("nav ul li").not(".menu").show();
+		}
+};
+</script>
+<header role="banner"><h1>Logo或Banner</h1></header>
+<nav role="navigation">
+<ul>
+<li class="menu"><span>菜单&rarr;</span><a id="menu" href="#"></a></li>
+<li>壹</li>
+<li>贰</li>
+<li>叁</li>
+<li>肆</li>
+</ul>	
+</nav>
+<div style="clear: both;"></div>
+<div id="wrapper">
+	#自适应导航栏<br/>
+	#响应默认尺寸为：宽600px<br/>
+	#本示例还包含[HTML5]、[CSS3]、[SVG]
+</div>
+<footer>页脚
+	</footer>
+</body>
+</html>
