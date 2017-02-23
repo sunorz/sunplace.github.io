@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>全屏滚动切换</title>
+<link type="text/css" rel="stylesheet" href="css/23/main.css">
+<style>
+
+span{font-size:medium;}
+.page1,.page3,.page5 {background-color:cadetblue;}
+</style>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/23/main.js"></script>
+<script>
+$(function(){
+	$('.main').onepage_scroll({
+		sectionContainer: '.page'
+	});
+});
+</script>
+
+</head>
+<body>
+<div class="main">
+	<div class="page page1">
+		壹
+		<br/><span>#支持页面样式和数量的调整（<b>.page、.page<i>n</i></b>）<br>#支持自适应</span>
+	</div>
+	<div class="page page2">
+		贰
+	</div>
+	<div class="page page3">
+		叁
+	</div>
+	<div class="page page4">
+		肆
+	</div>
+	<div class="page page5">
+		伍
+	</div>
+</div>
+</body>
+</html>
