@@ -1,14 +1,14 @@
 ﻿@charset "utf-8";
 /* CSS Document */
 body{font-family:Source Code Pro,"微软雅黑";margin:0;padding:0;background-color: #cce8cf;}
-.tips{background-color:#FFDF38;line-height: 2;padding: 5px;display: table;}
+.tips{background-color:#FFDF38;line-height: 2;padding: 5px;}
 .log{background-color:#FFDF38;line-height: 2.5;font-size: smaller;display: table;padding: 5px;color:#4D4D4D;}
 .log span{color:#fff;background-color:#4D4D4D;cursor: pointer;}
 .type{border-radius: 4px;padding: 4px;color: white;cursor: pointer; margin-left: 6px;}
-.tips-type{ background-color:#fff;display: table;width: 100%;}
+.tips-type{ background-color:#fff;}
 .clear{clear:both;}
-.odd-line{width: 25%;float: left;margin-top: 20px;line-height: 2.5;font-size: smaller;}
-.even-line{ background-color:#B6DEBA;width: 25%;float: left; margin-top: 20px;line-height: 2.5;font-size: smaller;}
+.line{width: 200px;float: left;margin-top: 20px;line-height: 2.5;font-size: smaller;padding:10px;}
+.even{ background-color:#B6DEBA;}
 a{color:#000;text-decoration: none;}
 a:hover{color:red;}
 .odd-line img,.even-line img{cursor: pointer;width: 1em;margin-right: 8px;}
