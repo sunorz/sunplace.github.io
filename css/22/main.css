@@ -21,10 +21,12 @@ footer{padding:20px;background-color: cadetblue;margin:0 auto;
 /*导航栏*/
 nav{width:100%;}
 nav ul{padding:0;margin:0 auto;max-width: 1024px;width: 100%;}
-nav li{background-color: burlywood;float: left;list-style-type: none;cursor: pointer;width: 25%;padding-top: 10px;padding-bottom:10px;text-align: center;}
-nav li:hover{background-color: blanchedalmond;color: #000;}
+nav li{background-color: burlywood;float: left;list-style-type: none;cursor: pointer;width:25%;height: 40px;line-height: 40px; text-align: center;}
+nav li a{display:block;height:100%;color:#fff;text-decoration: none;}
+nav li a:hover{color:#000;}
+nav li:hover{background-color: blanchedalmond;}
 nav ul .menu{display:none;text-align: right;}
-#menu{background: url(../../imgs/22/menu.svg) no-repeat;height: 28px;width: 28px;display:inline-block;background-size:cover;margin-right:10px;}
+#menu{background: url(../../imgs/22/menu.svg) no-repeat;height: 28px;width: 28px;display:inline-block;background-size:cover;margin-right:10px;vertical-align: middle;}
 @media screen and (max-width:600px)
 {
 	nav li{float:none;width: 100%;display: none;}
@@ -32,3 +34,5 @@ nav ul .menu{display:none;text-align: right;}
 	nav ul .menu:hover{background-color:burlywood;}
 }
 /*End of 导航栏*/
+.log{background-color:#FFDF38;line-height: 2.5;font-size: smaller;display: table;padding: 5px;color:#4D4D4D;}
+.log span{color:#fff;background-color:#4D4D4D;cursor: pointer;}
