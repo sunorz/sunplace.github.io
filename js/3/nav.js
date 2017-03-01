@@ -23,7 +23,7 @@ $(function () {
 $(function () {
 	var navLi=$(".box a");
 	navLi.mouseover(function () {
-	var Y = $(this).offset().left+$(this).width()/2-50;
+	var Y = $(this).offset().left+$(this).width()/2-50+10;
 	$(this).next(".rdnav").css({'left' :Y});
 
 	$(this).next(".rdnav").stop().slideDown();
