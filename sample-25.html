@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>树形结构</title>
+<style></style>
+<script src="js/jquery-3.1.1.min.js"></script>
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/25/jquery.treeview.css" />
+<script src="js/25/jquery.treeview.js"></script>
+<script src="js/25/jquery.cookie.js"></script>
+<script src="js/25/main.js"></script>
+</head>
+<body>
+<ul id="navigation" class="treeview">
+		<li class="expandable"><div class="hitarea expandable-hitarea"></div><a href="?1" class="">1</a>
+			<ul style="display: none;">
+				<li class="expandable"><div class="hitarea expandable-hitarea"></div><a href="?1.0" class="">1.0</a>
+					<ul style="display: none;">
+						<li class="last"><a href="?1.0.0">1.0.0</a></li>
+					</ul>
+				</li>
+				<li><a href="?1.1" class="">1.1</a></li>
+				<li class="expandable lastExpandable"><div class="hitarea expandable-hitarea lastExpandable-hitarea"></div><a href="?1.2">1.2</a>
+					<ul style="display: none;">
+						<li class="expandable"><div class="hitarea expandable-hitarea"></div><a href="?1.2.0">1.2.0</a>
+						<ul style="display: none;">
+							<li><a href="?1.2.0.0">1.2.0.0</a></li>
+							<li><a href="?1.2.0.1">1.2.0.1</a></li>
+							<li class="last"><a href="?1.2.0.2">1.2.0.2</a></li>
+						</ul>
+					</li>
+						<li class="expandable"><div class="hitarea expandable-hitarea"></div><a href="?1.2.1">1.2.1</a>
+						<ul style="display: none;">
+							<li class="last"><a href="?1.2.1.0">1.2.1.0</a></li>
+						</ul>
+					</li>
+						<li class="expandable lastExpandable"><div class="hitarea expandable-hitarea lastExpandable-hitarea"></div><a href="?1.2.2">1.2.2</a>
+						<ul style="display: none;">
+							<li><a href="?1.2.2.0">1.2.2.0</a></li>
+							<li><a href="?1.2.2.1">1.2.2.1</a></li>
+							<li class="last"><a href="?1.2.2.2">1.2.2.2</a></li>
+						</ul>
+					</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li class="expandable"><div class="hitarea expandable-hitarea"></div><a href="?2" class="">2</a>
+			<ul style="display: none;">
+				<li class="expandable"><div class="hitarea expandable-hitarea"></div><span>2.0</span>
+					<ul style="display: none;">
+						<li class="expandable lastExpandable"><div class="hitarea expandable-hitarea lastExpandable-hitarea"></div><a href="?2.0.0">2.0.0</a>
+						<ul style="display: none;">
+							<li><a href="?2.0.0.0">2.0.0.0</a></li>
+							<li class="last"><a href="?2.0.0.1">2.0.0.1</a></li>
+						</ul>
+					</li>
+					</ul>
+				</li>
+				<li class="expandable lastExpandable"><div class="hitarea expandable-hitarea lastExpandable-hitarea"></div><a href="?2.1">2.1</a>
+					<ul style="display: none;">
+						<li class="expandable"><div class="hitarea expandable-hitarea"></div><a href="?2.1.0">2.1.0</a>
+						<ul style="display: none;">
+							<li class="last"><a href="?2.1.0.0">2.1.0.0</a></li>
+						</ul>
+					</li>
+						<li class="expandable"><div class="hitarea expandable-hitarea"></div><a href="?2.1.1">2.1.1</a>
+						<ul style="display: none;">
+							<li><a href="?2.1.1.0abc">2.1.1.0</a></li>
+							<li><a href="?2.1.1.1">2.1.1.1</a></li>
+							<li class="last"><a href="?2.1.1.2">2.1.1.2</a></li>
+						</ul>
+					</li>
+						<li class="expandable lastExpandable"><div class="hitarea expandable-hitarea lastExpandable-hitarea"></div><a href="?2.1.2">2.1.2</a>
+						<ul style="display: none;">
+							<li><a href="?2.1.2.0">2.1.2.0</a></li>
+							<li><a href="?2.1.2.1">2.1.2.1</a></li>
+							<li class="last"><a href="?2.1.2.2">2.1.2.2</a></li>
+						</ul>
+					</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		</ul>
+</body>
+</html>
