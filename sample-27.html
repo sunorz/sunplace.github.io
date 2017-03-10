@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>向右展开</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<style>
+#tag{
+	background-color: burlywood;
+	padding: 10px;
+	cursor: pointer;
+	display: inline-block;
+	overflow: hidden;
+	margin: 20px;
+	}
+</style>
+</head>
+<body>
+<!--Copyright By Sunplace-->
+	<script src="js/jquery-3.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+var tb='JQuery';
+var tf='J';
+$("#tag").html(tb);
+var wb=$("#tag").width();
+$('#tag').html(tf);
+var wf=$("#tag").width();
+	$(function() {  
+	$('#tag').on({  
+		click:function(){ 
+		if($("#tag").width()==wb)
+		{
+			$('#tag').animate({width: wf}, 1000);
+			setTimeout(function(){$('#tag').html(tf)},1100);
+		}
+		else  if($("#tag").width()!=wb)
+		{			
+			$('#tag').animate({width: wb}, 1000);
+			$('#tag').html(tb);
+		}  
+	   } 
+	}); 
+}); 
+});	
+</script>
+<div id="tag"></div>
+</body>
+</html>
