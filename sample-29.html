@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>属性选择器</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<style>
+	input{padding:10px;background:#fff;border: none; cursor: pointer;}
+</style>
+<script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<!--Copyright By Sunplace-->
+<div class="desc">
+<p><a href="#">没有title</a></p>
+<p><a href="#" title="nu">nu</a></p>
+<p><a href="#" title="num">num</a></p>
+<p><a href="#" title="num1">num1</a></p>
+<p><a href="#" title="cnum">cnum</a></p>
+<p><a href="#" title="num-a12">num-a12</a></p>
+<p><a href="#" title="ki num bc leo">ki num bc leo</a></p>
+<p><a href="#" title="fnumo">fnumo</a></p>
+<p><a href="#" id="numid" title="num1">带有id，num1</a></p>
+<p style="line-height: 4;">
+  <input type="button" name="button" id="btn0" value="还原">
+  <input type="button" name="button" id="btn1" value="a[title]">
+  <input type="button" name="button" id="btn2" value="a[title=num1]">
+  <input type="button" name="button" id="btn3" value="a[title^=num]">
+  <input type="button" name="button" id="btn4" value="a[title|=num]">
+  <input type="button" name="button" id="btn5" value="a[title$=num]">
+  <input type="button" name="button" id="btn6" value="a[title!=num]">
+  <input type="button" name="button" id="btn7" value="a[title~=num]">
+  <input type="button" name="button" id="btn8" value="a[title*=num]">
+  <input type="button" name="button" id="btn9" value="a[id][title=num1]">
+</p>
+</div>
+<script>
+	function reset(){$("a").css({'color':'black','font-weight':'normal'});}
+	$("#btn0").click(function(){reset()});
+	$("#btn1").click(function(){reset();$("a[title]").css({'color':'red','font-weight':'bolder'});});
+	$("#btn2").click(function(){reset();$("a[title=num1]").css({'color':'red','font-weight':'bolder'});});
+	$("#btn3").click(function(){reset();$("a[title^=num]").css({'color':'red','font-weight':'bolder'});});
+	$("#btn4").click(function(){reset();$("a[title|=num]").css({'color':'red','font-weight':'bolder'});});
+	$("#btn5").click(function(){reset();$("a[title$=num]").css({'color':'red','font-weight':'bolder'});});
+	$("#btn6").click(function(){reset();$("a[title!=num]").css({'color':'red','font-weight':'bolder'});});
+	$("#btn7").click(function(){reset();$("a[title~=num]").css({'color':'red','font-weight':'bolder'});});
+	$("#btn8").click(function(){reset();$("a[title*=num]").css({'color':'red','font-weight':'bolder'});});
+	$("#btn9").click(function(){reset();$("a[id][title=num1]").css({'color':'red','font-weight':'bolder'});});
+</script>
+</body>
+</html>
