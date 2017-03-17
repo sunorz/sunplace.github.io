@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>文字居中</title>
+<style>
+	#me0,#me2{
+		width:300px;
+		height:200px;
+		text-align:center;
+		float:left;
+		padding:0px; 
+		margin: 20px; background:#3ec9c3;
+	}
+	#me1,#me3{padding:10px;line-height: 2;color: #fff;background: rgba(0,0,0,0.08);}
+	#me2{		
+		display: table;
+	}
+	#me3{
+		display:table-cell;
+		vertical-align:middle;
+	}
+</style>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<!--Copyright By Sunplace-->
+	<div id="me0">
+	<p id="me1">JQuery<br/>多行文本居中</p>
+	</div>
+	<div id="me2">
+	<p id="me3">CSS<br/>多行文本居中</p>
+	</div>
+<script>
+$(function(){
+$('#me1').css('margin-top',function(){
+	return $('#me0').height()/2-$('#me1').innerHeight()/2;	
+});	
+});	
+	</script>
+</body>
+</html>
