@@ -2,26 +2,89 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>三等分</title>
-<link href="css/main.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="css/bootstrap.min.css">  
-<style>
-body{font-family:Source Code Pro,"微软雅黑";margin:0;padding:0;background-color: #cce8cf;}
-.row{width:800px;margin: 20px auto;}
-.col-md-4:nth-child(2),.col-md-4:nth-child(4){background-color:cadetblue; color: #fff;height: 50px;}
-.col-md-4:nth-child(3){background-color:#fff;height: 50px;}
-</style>
+<title>键鼠切换图片</title>
+<link href="css/main.css" type="text/css" rel="stylesheet">
+<script src="js/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){
+	$('#content').width($('img').width());
+//	$('#left').width($('img').width()/2);
+//	$('#left').height($('img').height());
+//	$('#right').width($('#left').width());
+//	$('#right').height($('#left').height());
+//	$('#right').css('left',$('#left').width());
+//键盘操作
+var index=0;
+var sw=$('img').offset().left+$('img').width()/2;//阀值
+$('body').keyup(function(e){	
+	//左
+	if(e.keyCode==37){
+		if(index>0){	
+			index--;			
+		}
+		else
+			{index=0;}
+	}
+	//右
+	else if(e.keyCode==39){
+		if(index<5){	
+			index++;			
+		}	
+		else
+			{index=5;}
+	}
+	$("img").attr("src","imgs/8/img"+index+".jpg");
+})
+//鼠标操作
+$('img').click(function(e){
+	
+	if(e.pageX>sw)
+			{
+			if(index<5){	
+			index++;			
+		}	
+		else
+			{index=5;}
+	}
+	else
+		{
+			if(index>0){	
+			index--;			
+		}
+		else
+			{index=0;}
+		}
+	$("img").attr("src","imgs/8/img"+index+".jpg");
+})
+//鼠标样式
+$('img').mousemove(function(k){
+	if(k.pageX>sw&&index==5)
+		{
+			$('img').css('cursor','not-allowed');
+			$('img').attr('title','已经是最后一张');
+		}
+	else if(k.pageX<sw&&index==0)
+		{
+			$('img').css('cursor','not-allowed');
+			$('img').attr('title','已经是第一张');
+		}
+	else
+		{
+			$('img').css('cursor','pointer');
+			$('img').removeAttr('title');
+			
+		}
+})
+})
+</script>
 </head>
 <body>
 <!--Copyright By Sunplace-->
-<div class="row">
- <div class="col-md-12">宽度<b>800px</b></div>
-  <div class="col-md-4">宽度<b>800/3px</b></div>
-  <div class="col-md-4"><code>.col-md-4</code></div>
-  <div class="col-md-4"><code>.col-md-4</code></div>
+<div id="content" style="margin: 20px auto;position: relative;">
+<!--<div id="left" style="position: absolute;background: rgba(19,120,176,0.5);">左</div>
+<div id="right" style="position: absolute;background: rgba(40,159,65,0.5);">右</div>-->
+<img src="imgs/8/img0.jpg"  alt="">
 </div>
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<div class="desc">鼠标在左侧点击上翻，鼠标在右侧点击下翻。<br/>操作键盘左键（←）上翻，右键（→）下翻。</div>
 </body>
 </html>
