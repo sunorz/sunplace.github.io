@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>复制到剪贴板</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<style>
+.clip{
+	background:#CCCCCC;
+	color:#323232;
+	border:none;
+	outline: none;
+	padding:0.5em;
+	margin: 0;
+	border-radius: 6px;
+	margin-right: 0.5em;
+	}
+	.clip:hover{background:#3385ff ;color:#D7D5D0 ;}
+	pre{
+		display: block;
+    padding: 9.5px;
+    margin: 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+		    white-space: pre-wrap;
+    word-wrap: break-word;
+	}
+	button{cursor: pointer;}
+</style>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/30/clipboard.min.js"></script>
+<script>
+$(function(){
+	$('pre').each(function(){		
+		$(this).prepend('<button type="button" class="clip" data-clipboard-text="'+$(this).text()+'">Copy</button>');
+	})
+	var clipboard = new Clipboard('.clip');
+	$('.clip').click(function(){
+		alert('已复制到剪贴板！');
+	});
+})
+</script>
+</head>
+<body>
+<!--Copyright By Sunplace-->
+	<div class="desc">访问如下的网址，查看其他实例。</div>
+<pre>https://clipboardjs.com/</pre>
+</body>
+</html>
