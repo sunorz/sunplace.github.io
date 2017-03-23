@@ -42,14 +42,15 @@ $(function(){
 	})
 	var clipboard = new Clipboard('.clip');
 	$('.clip').click(function(){
-		alert('已复制到剪贴板！');
-	});
+		$(this).text('Copied！');
+		$(this).css({'background':'#3385ff','color':'#D7D5D0'});
+	});	
 })
 </script>
 </head>
 <body>
 <!--Copyright By Sunplace-->
-	<div class="desc">访问如下的网址，查看其他实例。</div>
+	<div class="desc">UC浏览器手机版不支持，使用前请测试。<br/>访问如下的网址，查看其他实例。</div>
 <pre>https://clipboardjs.com/</pre>
 </body>
 </html>
