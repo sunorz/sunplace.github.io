@@ -3,7 +3,7 @@
 $(function () {
 	var navLi=$(".menu .nav li");
 	navLi.mouseover(function () {
-		$(this).find("a").toggleClass("current");
+		$(this).find("a").addClass("current");
 		$(this).find(".box").stop().slideDown();
 		
 	})
