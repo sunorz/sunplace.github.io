@@ -3,7 +3,7 @@
 $(function () {
 	var navLi=$(".menu .nav li");
 	navLi.mouseover(function () {
-		$(this).find("a").addClass("current");
+		$(this).find("a").toggleClass("current");
 		$(this).find(".box").stop().slideDown();
 		
 	})
@@ -49,15 +49,7 @@ $(function () {
 $(function () {
 	var navLi=$("#lang");	
 	navLi.click(function () {	
-		if($(".tran").is(":hidden"))
-			{
-				$("#lang").addClass("curlang");	
-			}
-		else
-			{
-                $("#lang").removeClass("curlang");						
-			}
-		
+		$('#lang').toggleClass('curlang');		
 		$(".tran").stop().toggle();
 	})
 });	
