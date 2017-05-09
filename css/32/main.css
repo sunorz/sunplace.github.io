@@ -1,5 +1,4 @@
 .menu{
-	cursor:pointer;
 	z-index: 9999;
 }
 .menu::after{
@@ -20,6 +19,7 @@ li{
 	border-radius: 5px 5px 0px 0px;
 	background:#CCCCCC;
 	color:#fff;
+	cursor:pointer;
 }
 li:hover{
 	background:#FFF;
