@@ -1,12 +1,30 @@
 $(function(){
-   $(".menu li:first-child").css({background:"#fff",color:"#000"}).css('border-bottom-color','#fff');
+   //初始化
+   $(".menu li:first-child").addClass("curclick");
    $("dir:first-child").show();
+   var tag = 0;
+   //鼠标点击
    $(".menu li").click(function(){
-	   $(this).css({background:"#fff",color:"#000"}).css('border-bottom-color','#fff');
-	   $(".menu li").not(this).css({background:"#CCCCCC",color:"#fff"}).css('border-bottom-color','#CCCCCC');
-	   var tag = $(this).index();
-	   $("dir:eq("+tag+")").show();
-	   $("dir").not("dir:eq("+tag+")").hide();
-	   
-   })
+   $(this).addClass("curclick");
+   $(".menu li").not(this).removeClass("curclick");
+   $(".menu li").removeClass("curhover");
+   tag = $(this).index();
+   $("dir:eq("+tag+")").show();
+   $("dir").not("dir:eq("+tag+")").hide();	   
+   });
+   //鼠标悬停   
+   $(".menu li").hover(function(){
+   		if($(this).index()!==tag){
+   			$(this).addClass("curhover");
+		}
+},function(){
+	   if($(this).index()!==tag){
+       $(this).removeClass("curhover");
+	   }
+});
+		    
+
+
+
+
 });

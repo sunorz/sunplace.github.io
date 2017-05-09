@@ -21,9 +21,14 @@ li{
 	color:#fff;
 	cursor:pointer;
 }
-li:hover{
-	background:#FFF;
-	color: #000;
+.curclick{
+        background:#FFF;
+	    color: #000;
+        border-bottom-color:#fff;
+}
+.curhover{
+        background:#FFF;
+	    color: #000;        
 }
 .content{
 	border:#CCCCCC 1px solid;
