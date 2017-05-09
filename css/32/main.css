@@ -19,16 +19,18 @@ li{
 	border-radius: 5px 5px 0px 0px;
 	background:#CCCCCC;
 	color:#fff;
-	cursor:pointer;
+
 }
 .curclick{
-        background:#FFF;
-	    color: #000;
-        border-bottom-color:#fff;
+	background:#FFF;
+	color: #000;
+	border-bottom-color:#fff;
+	cursor: default;
 }
 .curhover{
-        background:#FFF;
-	    color: #000;        
+    background:#FFF;
+	color: #000;
+	cursor:pointer;        
 }
 .content{
 	border:#CCCCCC 1px solid;
