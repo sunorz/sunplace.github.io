@@ -1,4 +1,4 @@
-*{margin:0;padding:0;}
+﻿*{margin:0;padding:0;}
 	#content{margin:20px auto; width: 100%;text-align: center;}
 	#cover{background: rgba(0,0,0,0.5); position: absolute;z-index: 999; width: 100%; top:0;display: none;}
 	#lgpic{
