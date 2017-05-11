@@ -1,4 +1,4 @@
-//初始化
+﻿//初始化
 function init()
 	{
 		$("#cover").css('height',$(window).height());
@@ -11,7 +11,6 @@ function init()
 		//点击缩略图
 		$(".thumbnail").click(function(even){
 			event.preventDefault();//阻止超链接的默认行为
-			console.log($("#close").offset().top);
 			$("#lgpic").attr('src',$(this).parent('a').attr('href'));			
 			$("#cover").fadeIn(function(){
 			setsize();
