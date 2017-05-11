@@ -4,7 +4,7 @@ demo
 
 [View demo](https://sunorz.github.io/demo)
 
-post action link to www.jsunplace.com is my website :).
+post action link to www.jsunplace.com is my blog. :smile:
 
 any question plz send to [sunplace@live.cn](mailto:sunplace@live.cn).
 
