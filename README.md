@@ -1,6 +1,6 @@
 demo
 =================
-##English
+## English
 
 [View demo](https://sunorz.github.io/demo)
 
@@ -10,7 +10,7 @@ any question plz send to [sunplace@live.cn](mailto:sunplace@live.cn).
 
 my website:[卡库伊2.0](http://www.jsunplace.com).
 
-##中文
+## 中文
 
 自己做的一些前端模块。可以浏览[这里](https://sunorz.github.io/demo)。
 
