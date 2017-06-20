@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>计算时间差</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<style>	
+	input[type=button]{padding:10px;background:#fff;border: none; cursor: pointer;}
+	input[type=date]{padding:0 10px 0 10px;margin:10px;background:#fff;border:#CCC 1px solid;font-size:1.2em; border-radius:20px;outline:none;}
+</style>
+</head>
+<script src="js/jquery-3.1.1.min.js"></script>
+<body>
+<!--Copyright By Sunplace-->
+<div style="margin:20px auto;width:500px;">从<input type="date" id="start">至<input type="date" id="end">。<input type="button" id="sub" value="计算">
+<p style="background-color:yellow;padding:10px;">输入格式：年-月-日(<span></span>)</p></div>
+<script>
+$(function(){
+	var ndate = new Date();
+	var month = ndate.getMonth() + 1 < 10 ? "0" + (ndate.getMonth() + 1) : ndate.getMonth() + 1;  
+    var date = ndate.getDate() < 10 ? "0" + ndate.getDate() : ndate.getDate(); 
+	$("span").text(ndate.getFullYear()+"-"+month+"-"+date);
+	$("#end").val(ndate.getFullYear()+"-"+month+"-"+date);
+	$("#sub").click(function(){
+		$("p").css("color","black");
+		$("p").text("");
+		
+		var sdate = new Date($("#start").val());
+		var edate = new Date($("#end").val());
+		var offset = edate.getTime()-sdate.getTime();
+		var days=parseInt(offset/(1000 * 60 * 60 * 24));
+		if(days<0)
+			{
+			  $("p").css("color","orange");
+			  $("p").text("截止日期早于起始日期！");
+			 
+			  return false;	
+			}
+		if(isNaN(days)){
+			$("p").css("color","red");
+			$("p").text("输入格式错误！");
+		
+			  return false;	}
+			
+		$("p").text(days+"天");		
+	})
+	
+})
+</script>
+</body>
+</html>
