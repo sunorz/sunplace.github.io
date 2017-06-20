@@ -34,13 +34,13 @@ $(function(){
 			  $("p").css("color","orange");
 			  $("p").text("截止日期早于起始日期！");
 			 
-			  return false;	
+			  return;	
 			}
 		if(isNaN(days)){
 			$("p").css("color","red");
 			$("p").text("输入格式错误！");
 		
-			  return false;	}
+			  return;	}
 			
 		$("p").text(days+"天");		
 	})
