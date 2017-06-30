@@ -1,0 +1,72 @@
+/*
+  背景样式
+  Copyright By Erin_梦@简书
+*/
+body{
+background:#cce8cf;;
+background-image: linear-gradient(white 2px,transparent 0),
+	linear-gradient(90deg, white 2px,transparent 0),
+   linear-gradient(hsla(0,0%,100%,.3) 1px,transparent 0),
+	linear-gradient(90deg,hsla(0,0%,100%,.3) 1px,transparent 0);
+background-size:75px 75px,75px 75px,15px 15px,15px 15px;
+	}
+/*静态样式*/
+#wrap
+{
+margin: 300px;
+height: 300px;
+width: 300px;
+position: relative;
+}
+.card
+{
+background: url(../../imgs/35/back.jpg);
+position: absolute;
+top:0;
+left: 0;
+height: 300px;
+width: 300px;
+cursor: pointer;
+border-radius: 10px;
+box-shadow: 0 0 0 10px #97c4e3;/*圆角边框 Copyright By 张鑫旭*/
+}
+/*动态样式*/
+.back{
+animation: open linear 3s;	
+-moz-animation: open linear 3s;	/* Firefox */
+-webkit-animation: open linear 3s;	/* Safari 和 Chrome */
+-o-animation: open linear 3s;
+animation-fill-mode : forwards;/*保持最终效果*/
+-moz-animation-fill-mode : forwards;
+-webkit-animation-fill-mode : forwards;
+-o-animation-fill-mode : forwards;
+}
+.front{
+box-shadow: 0 0 0 10px #fff;
+animation: close linear 3s;	
+-moz-animation: close linear 3s;	/* Firefox */
+-webkit-animation: close linear 3s;	/* Safari 和 Chrome */
+-o-animation: close linear 3s;
+animation-fill-mode : forwards;/*保持最终效果*/
+-moz-animation-fill-mode : forwards;
+-webkit-animation-fill-mode : forwards;
+-o-animation-fill-mode : forwards;
+}
+@-webkit-keyframes open /* Safari 和 Chrome */
+{	
+from {
+	-webkit-transform: perspective(0) rotateY(0);
+	}	
+to {
+	-webkit-transform: perspective(600px) rotateY(90deg);
+	}
+}
+@-webkit-keyframes close /* Safari 和 Chrome */
+{	
+from {
+	-webkit-transform: perspective(600px) rotateY(-90deg);
+	}	
+to {
+	-webkit-transform: perspective(0) rotateY(0);
+	}
+}
