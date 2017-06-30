@@ -1,4 +1,4 @@
-/*
+﻿/*
   背景样式
   Copyright By Erin_梦@简书
 */
@@ -13,7 +13,7 @@ background-size:75px 75px,75px 75px,15px 15px,15px 15px;
 /*静态样式*/
 #wrap
 {
-margin: 300px;
+margin: 100px auto;
 height: 300px;
 width: 300px;
 position: relative;
