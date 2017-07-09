@@ -9,18 +9,31 @@
 <!--Copyright By Sunplace-->
 <script src="js/jquery-3.1.1.min.js"></script>
 <script>
-$(function(){
-	$("#wrap").click(function(){
+var src="imgs/8/img6.jpg";
+img = $('<img src="' + src + '">');
+img.on('load', function(){
+	console.log("正面加载完毕。");//加载卡牌正面提示
+	$("#loading").hide();
+	$(".card").css("display","block");
+	card_init();
+})
+
+function card_init(){
+$("#wrap").bind("click",function(){
 		$(".card").addClass("back");
 		setTimeout(function(){
 			$(".card").attr("class","card front");
-			$(".card").css("background","url(imgs/8/img6.jpg)");
+			$(".card").css("background","url("+src+")");
 		},3000);
 	})
-})
+}
+
 </script>
+<div id="loading"><span>加载中...</span></div>
 <div id="wrap">
-  <div class="card"></div>
+  <div class="card" style="display:none;"></div>
 </div>
+<div class="log">更新内容：<br/>
+<span>1.1</span>&nbsp;at&nbsp;Jul.9th,2017&nbsp;&nbsp;#缓存卡牌正面。&nbsp;&nbsp;#载入界面。&nbsp;&nbsp;#转到正面时还原鼠标样式。</div>
 </body>
 </html>

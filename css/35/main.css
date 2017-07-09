@@ -3,6 +3,7 @@
   Copyright By Erin_梦@简书
 */
 body{
+margin: 0;padding: 0;
 background:#cce8cf;;
 background-image: linear-gradient(white 2px,transparent 0),
 	linear-gradient(90deg, white 2px,transparent 0),
@@ -10,14 +11,21 @@ background-image: linear-gradient(white 2px,transparent 0),
 	linear-gradient(90deg,hsla(0,0%,100%,.3) 1px,transparent 0);
 background-size:75px 75px,75px 75px,15px 15px,15px 15px;
 	}
+/*更新日志*/
+.log{background-color:#FFDF38;line-height: 2.5;font-size: smaller;display: table;padding:5px;color:#4D4D4D;max-width: 470px;}
+.log span{color:#fff;background-color:#4D4D4D;cursor: pointer;}
 /*静态样式*/
-#wrap
+#wrap,#loading
 {
 margin: 100px auto;
 height: 300px;
 width: 300px;
 position: relative;
+color:#fff;
+line-height: 300px;
+text-align: center;
 }
+#loading span{color:#fff;background-color:#4D4D4D;}
 .card
 {
 background: url(../../imgs/35/back.jpg);
@@ -42,6 +50,7 @@ animation-fill-mode : forwards;/*保持最终效果*/
 -o-animation-fill-mode : forwards;
 }
 .front{
+cursor:default;
 box-shadow: 0 0 0 10px #fff;
 animation: close linear 3s;	
 -moz-animation: close linear 3s;	/* Firefox */
