@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>超长文字滚动</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<style>
+	#wrap{
+		width: 200px;
+		background: #000201;
+		color: #00cbf0; 
+		overflow: hidden;
+		padding:10px 0px 10px 0px;
+		position: relative;
+		margin: 30px auto;
+		border:#000201 solid 5px;
+		border-radius: 7px;
+	}
+	#inner{
+		display: inline-block;
+		position: absolute;
+		white-space: nowrap;
+		left: 1em;
+		
+	}
+</style>
+<script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<!--Copyright By Sunplace-->
+<div id="wrap"><div style="position: absolute;background: #000201;z-index: 999;padding-right:0.5em;">▶</div><div id="inner">あぁ   このまま僕たちの声が / 世界の端っこまで消えることなく</div></div>
+<script>
+function scroll(){
+		var offset = $("#inner").width()-$("#wrap").width();
+	    $("#inner").delay(5000);//延时5s
+		//	if($("#inner").is(":animated")){
+		//		console.log("执行中");	    
+		//	}
+			$("#inner").animate({left:'-'+offset},15000,function(){//动画时长15s
+				$("#inner").css("left","1em");	    
+			});
+	    
+		}
+$(function(){
+		$("#wrap").height($("#inner").height());//设置#wrap层高度
+		setInterval("scroll()");	
+	}); 
+</script>
+</body>
+</html>
