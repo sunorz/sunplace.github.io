@@ -23,12 +23,18 @@
 		left: 1em;
 		
 	}
+	#icon{
+		position: absolute;
+		background: #000201;
+		z-index: 999;
+		padding-right:0.5em;
+	}
 </style>
 <script src="js/jquery-3.1.1.min.js"></script>
 </head>
 <body>
 <!--Copyright By Sunplace-->
-<div id="wrap"><div style="position: absolute;background: #000201;z-index: 999;padding-right:0.5em;">▶</div><div id="inner">あぁ   このまま僕たちの声が / 世界の端っこまで消えることなく</div></div>
+<div id="wrap"><div id="icon">▶</div><div id="inner">あぁ   このまま僕たちの声が / 世界の端っこまで消えることなく</div></div>
 <script>
 function scroll(){
 		var offset = $("#inner").width()-$("#wrap").width();
