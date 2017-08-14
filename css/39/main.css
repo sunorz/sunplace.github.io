@@ -7,18 +7,18 @@
 	white-space: pre-wrap;
     word-wrap: break-word;
 	/*End of 自动换行*/
-	background:#F3F3F3; 
+	background:#f3f3f3; 
 	font-family:Source Code Pro,"微软雅黑";
 	}
 .linenum{
-	background: #E3E3E3;
+	background: #e3e3e3;
 	display:inline-block;
 	position: absolute;
 	top:0;
 	left:0;
 	margin: 0;
 	line-height:2;
-	color:#8F8F8F;
+	color:#3b3b3b;
 	border-right:#D3D3D3 solid 1px;
 	}
 	body{font-size: 14px;}
