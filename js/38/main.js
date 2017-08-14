@@ -15,14 +15,12 @@ $(function(){
 	$("#line").css("left",$("#vertical-line span:first").position().left+6.5);	
 		if($("#wrap-h").width()>$("#horizontal-line").width()){
 			$("#wrap-h").css("overflow","hidden");
-			console.log($("#wrap-h").width()-$("#horizontal-line").width());
 		}
 		else if($("#wrap-h").width()<$("#horizontal-line").width())
 			{
 				$("#wrap-h").css("overflowX","auto");
-				console.log($("#wrap-h").width()-$("#horizontal-line").width());
 			}
-	})
-	$("span").mouseover(function(){$(this).css("background","#39AC3C")})
-	$("span").mouseleave(function(){$(this).css("background","#CCE8CF")})
-})
+	});
+	$("span").mouseover(function(){$(this).css("background","#39AC3C");});
+	$("span").mouseleave(function(){$(this).css("background","#CCE8CF");});
+});

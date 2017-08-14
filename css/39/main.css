@@ -1,0 +1,25 @@
+.codeblock{
+	position: relative;
+	padding-left:4em;
+	line-height: 2;
+	border: #D3D3D3 solid 1px;
+	/*自动换行*/
+	white-space: pre-wrap;
+    word-wrap: break-word;
+	/*End of 自动换行*/
+	background:#F3F3F3; 
+	font-family:Source Code Pro,"微软雅黑";
+	}
+.linenum{
+	background: #E3E3E3;
+	display:inline-block;
+	position: absolute;
+	top:0;
+	left:0;
+	margin: 0;
+	line-height:2;
+	color:#8F8F8F;
+	border-right:#D3D3D3 solid 1px;
+	}
+	body{font-size: 14px;}
+	.mark{background: #fff497;}	
