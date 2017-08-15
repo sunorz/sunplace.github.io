@@ -1,6 +1,6 @@
-﻿body{
-	font-size: smaller;	
-}
+﻿ul{margin:0;padding: 0;}
+p{line-height: 2;}
+li{list-style-type: none;padding:0px 0.5em 0px 0px;text-align: right;margin:0px;width: 3em;}
 .codeblock{
 	position: relative;
 	padding-left:4em;
@@ -12,6 +12,7 @@
 	background:#f3f3f3; 
 	font-family:Source Code Pro,"微软雅黑";
 	margin:20px 0px 20px 0px;
+	font-size: smaller;	
 	}
 .linenum{
 	background: #e3e3e3;

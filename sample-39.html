@@ -10,30 +10,32 @@
 </head>
 <body>
 <!--Copyright By Sunplace-->
-<div style="width: 90%;margin: 0 auto;">
-<pre class="codeblock" line="6,8">
-dependencies {
-compile fileTree(dir: 'libs', include: ['*.jar'])
-androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-exclude group: 'com.android.support', module: 'support-annotations'
-})
-compile 'com.android.support:appcompat-v7:26.+'
-compile 'com.android.support.constraint:constraint-layout:1.0.2'
-compile 'com.android.support:percent:26.+'
-testCompile 'junit:junit:4.12'
+<div id="wrap" style="width: 90%;margin: 20px auto;background: #fff;padding: 1em;">
+<h3>使用说明</h3>
+<b>1.引入CSS和JS文件</b>
+<pre class="codeblock" line="1,3,4">&lt;link href=&quot;css/codeboard.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+&lt;!--代码部分--&gt;
+&lt;script src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/codeboard.min.js&quot;&gt;&lt;/script&gt;</pre>
+<b>2.调用</b>
+<pre class="codeblock">&lt;pre class=&quot;codeblock&quot;&gt;/*代码片段*/&lt;/pre&gt;</pre>
+<p>格式：&lt;pre class=&quot;codeblock&quot;  <b>start</b>=&quot;6&quot; <b>line</b>=&quot;7,9&quot;&gt;<br/>
+start:起始行号（缺省为1）<br/>
+line:需要高亮的行号（缺省为不高亮）</p>
+示例（从第6行开始，7和9行高亮）：
+<pre class="codeblock" start="6" line="7,9">
+public class HelloWorld(){	
+	public static void main(String[] args)
+	{
+		System.out.print("Hello World!");		
+	}	
 }
 </pre>
-<pre class="codeblock" line="3">
-public class HelloWorld{
-
-	public static void main(String[] args){
-	
-		System.out.println("Hello World");
-		
-	}
-	
-}
-</pre>
+<b>3.其他</b>
+<p>
+	最多支持行数为9999,超出范围需要调整<b>.linenum</b>的宽度。<br/>
+	Wordpress等博客中引用需覆盖原来的样式。
+</p>
 </div>
 <script src="js/39/main.js"></script>
 </body>
