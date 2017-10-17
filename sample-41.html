@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>即时搜索</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<style>
+	ul,li{list-style-type: none;margin: 0;padding: 0;cursor: default;}
+	li:hover,.cur{background: #4D8CFB;color: #fff;}
+	input{padding:0;border:  solid 1px #000;outline: none;font-size: 24px;line-height: 24px;}
+</style>
+<script src="jq.js"></script>
+<script> 
+$(function(){
+	
+	$("form").keypress(function(event){
+         if(event.which==13)
+		 return false;
+	})
+	
+	var len = 0;//初始化长度
+    $("ul").width($("#keywds").width()+2);	
+	$("#keywds").keyup(function(event){
+		if(event.which==13){
+			event.preventDefault();
+			$.post("https://jsunplace.com/assets/41/do_action.php",{title:$("#keywds").val(),keywds:null},function(result){
+				  $("#responseOutput").html(result);});
+		}
+		else if(event.which>40 || event.which<37)
+			{
+	          $.post("https://jsunplace.com/assets/41/do_action.php",{title:null,keywds:$("#keywds").val()},function(result){
+				  $("#responseOutput").html(result);
+				  				//鼠标事件
+		$("#responseOutput li").mouseover(function(){			
+			$("#responseOutput li").siblings().removeClass("cur");
+		});
+		$("#responseOutput li").click(function(){			
+			$("#keywds").val($(this).text());
+			$.post("https://jsunplace.com/assets/41/do_action.php",{title:$("#keywds").val(),keywds:null},function(result){
+				  $("#responseOutput").html(result);});
+			
+		});
+				  
+			  });
+			  
+			}
+	}
+					  );
+	var i = -1;
+	$("#keywds").keydown(function(event){
+		len = $("#responseOutput li").length;//获取个数
+		
+      if(event.which==38){	
+			//向上按键			
+			if(i<=0){
+				i=0;
+			}
+	        else if(i>0){
+				i--;
+			}
+			Setstyle(i);	
+			}
+		else if(event.which==40){
+		
+			//向下按键
+			if(i>=len-1){
+				i=len-1;
+			}
+	        else if(i<len-1){
+				i++;
+			}
+
+			Setstyle(i);
+				
+		}
+	});	
+	
+
+
+})
+
+function Setstyle(i){
+	$("#responseOutput li:eq("+i+")").addClass("cur");
+	$("#keywds").val($("#responseOutput li:eq("+i+")").text());
+	$("#responseOutput li:eq("+i+")").siblings().removeClass("cur");
+}
+
+
+	
+
+</script> 
+</head>
+<body>
+<!--Copyright By Sunplace-->
+<form action="" autocomplete="off">
+ <input type="text" id="keywds">
+</form> 
+<ul id="responseOutput">&nbsp;</ul> 
+</body>
+</html>
