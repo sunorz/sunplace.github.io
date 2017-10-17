@@ -22,12 +22,12 @@ $(function(){
 	$("#keywds").keyup(function(event){
 		if(event.which==13){
 			event.preventDefault();
-			$.post("https://jsunplace.com/assets/41/do_action.php",{title:$("#keywds").val(),keywds:null},function(result){
+			$.post("inc/41/do_action.php",{title:$("#keywds").val(),keywds:null},function(result){
 				  $("#responseOutput").html(result);});
 		}
 		else if(event.which>40 || event.which<37)
 			{
-	          $.post("https://jsunplace.com/assets/41/do_action.php",{title:null,keywds:$("#keywds").val()},function(result){
+	          $.post("inc/41/do_action.php",{title:null,keywds:$("#keywds").val()},function(result){
 				  $("#responseOutput").html(result);
 				  				//鼠标事件
 		$("#responseOutput li").mouseover(function(){			
@@ -35,7 +35,7 @@ $(function(){
 		});
 		$("#responseOutput li").click(function(){			
 			$("#keywds").val($(this).text());
-			$.post("https://jsunplace.com/assets/41/do_action.php",{title:$("#keywds").val(),keywds:null},function(result){
+			$.post("inc/41/do_action.php",{title:$("#keywds").val(),keywds:null},function(result){
 				  $("#responseOutput").html(result);});
 			
 		});
@@ -90,7 +90,6 @@ function Setstyle(i){
 </script> 
 </head>
 <body>
-<!--Copyright By Sunplace-->
 <form action="" autocomplete="off">
  <input type="text" id="keywds">
 </form> 
