@@ -4,9 +4,12 @@
 <meta charset="utf-8">
 <title>即时搜索</title>
 <style>
+	body{font-family:Source Code Pro,"微软雅黑";background-color: #cce8cf;}
+	a{color:#000;text-decoration: none;}
+    a:hover{color:red;}
 	ul,li{list-style-type: none;margin: 0;padding: 0;cursor: default;}
 	li:hover,.cur{background: #4D8CFB;color: #fff;}
-	input{padding:0;border:  solid 1px #000;outline: none;font-size: 24px;line-height: 24px;}
+	input{padding:0;border:  solid 1px #000;outline: none;font-size: 24px;line-height: 24px;margin-top: 1em;}
 </style>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script> 
@@ -82,16 +85,11 @@ function Setstyle(i){
 	$("#responseOutput li:eq("+i+")").addClass("cur");
 	$("#keywds").val($("#responseOutput li:eq("+i+")").text());
 	$("#responseOutput li:eq("+i+")").siblings().removeClass("cur");
-}
-
-
-	
-
-</script> 
+}</script> 
 </head>
 <body>
 <form action="" autocomplete="off">
- <input type="text" id="keywds">
+ <center><input type="text" id="keywds"></center>
 </form> 
 <ul id="responseOutput">&nbsp;</ul> 
 </body>
