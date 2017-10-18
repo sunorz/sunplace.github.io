@@ -7,7 +7,7 @@
 	 array("Java","从入门到跳槽。")
  );
 $flag = 0;
-$rsar = array();//存储结果
+
 
 if($_POST['keywds']!=null){
  $postdata = $_POST['keywds'];
@@ -23,7 +23,7 @@ for($i=0;$i<count($resarry);$i++)
 } 
 
 if($flag==0){
-	print("也许没有结果就是最好的结果。");
+	print("<p>也许没有结果就是最好的结果。</p>");
 }
 
 }
@@ -34,7 +34,7 @@ if($_POST['title']!=null){
 	if(stripos($resarry[$i][0],$_POST['title'])>-1)
 	{
 	print("<a href='#'>".$resarry[$i][0]."</a>");
-	print("<br/>".$resarry[$i][1]."<hr>");
+	print("<br/><span style='font-size:12px;'>".$resarry[$i][1]."</span><br/>");
 	}
 
 } 
