@@ -7,7 +7,7 @@
 	 array("Java","从入门到跳槽。")
  );
 $flag = 0;
-
+$rsar = array();//存储结果
 
 if($_POST['keywds']!=null){
  $postdata = $_POST['keywds'];

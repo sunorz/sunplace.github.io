@@ -7,6 +7,9 @@
 	body{font-family:Source Code Pro,"微软雅黑";background-color: #cce8cf;}
 	a{color:#000;text-decoration: none;}
     a:hover{color:red;}
+	td,th{border:solid #ccc 1px;padding: 0.5em;}
+	th{text-align: center;}
+    table{border-collapse:collapse;border:none;table-layout: fixed;background:#FBF5E0; margin-top: 2em;}
 	ul,li{list-style-type: none;margin: 0;padding: 0;cursor: default;text-align: left;}
 	li:hover,.cur{background: #4D8CFB;color: #fff;}
 	input{padding:0;border:  solid 1px #000;outline: none;font-size: 24px;line-height: 24px;margin-top: 1em;}
@@ -91,6 +94,41 @@ function Setstyle(i){
 <form action="" autocomplete="off">
  <center><input type="text" id="keywds"></center>
 </form> 
-<center><ul id="responseOutput">&nbsp;</ul></center>
+<center><ul id="responseOutput">
+<table>
+	<tr>
+	  <th colspan="3">数据库的内容</th>
+	  </tr>
+	<tr>
+		<th>id</th>
+		<th>title</th>
+		<th>content</th>
+	</tr>
+		<tr>
+		<td>1</td>
+		<td>Ana</td>
+		<td>content</td>
+	</tr>
+			<tr>
+		<td>2</td>
+		<td>Ana</td>
+		<td>content</td>
+	</tr>
+			<tr>
+		<td>3</td>
+		<td>Ana</td>
+		<td>content</td>
+	</tr>
+			<tr>
+		<td>4</td>
+		<td>Ana</td>
+		<td>content</td>
+	</tr>
+				<tr>
+		<td>5</td>
+		<td>Java</td>
+		<td>content</td>
+	</tr>
+</table></ul></center>
 </body>
 </html>
