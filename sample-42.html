@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>邮件补全</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="fa/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<style>
+	ul,li{list-style-type: none;margin: 0;padding: 0;cursor: default;text-align: left;}
+	#responseOutput{display: none;background: #fff;border: #CCCCCC 1px solid;line-height: 1.5;text-indent: 1em;}
+	li:hover{background: #4D8CFB;color: #fff;cursor:pointer;}
+	input{padding:0;border:  solid 1px #000;outline: none;font-size: 24px;line-height: 24px;}
+	i{top:50%;}
+	#email{position: absolute;left: 0;top: 0;}
+	#wrap{min-height:200px;}
+	.fa-times{color:#C86162;}
+	.fa-check{color:#76D316;}
+</style>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/42/main.js"></script> 
+</head>
+<body>
+<div id="wrap" style="position: relative;margin: 20px auto;">
+<div style="position: absolute;top: 0;left: 0;"><input type="text" id="email"></div>
+<div style="position: absolute;top: 0;right: 5px;line-height: 30px;height: 30px;"><i class="fa fa-times"></i></div>
+<div><ul id="responseOutput"></ul></div>
+</div>
+</body>
+</html>
