@@ -1,0 +1,10 @@
+@charset "utf-8";
+/*向右浮动，内部左对齐的f导航（可修改）*/
+.newnav{float: right;}
+.newnav ul,.newnav li{float: left;list-style-type: none;padding: 0;margin: 0;text-align: left;}
+.newnav li{min-width: 60px;cursor: pointer;}
+.newnav ul li ul{display: none;float: none !important;margin: 0 !important;position: absolute;border: red solid 1px;background: #fff;}
+.subm{float: none !important;margin: 0 !important;}
+.subm:hover{background:#EFEFEF;}
+.current{border-bottom: red 2px solid;}
+.newnav a{display: block;padding:5px;}
