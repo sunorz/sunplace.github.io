@@ -1,4 +1,4 @@
-$(function(){
+﻿$(function(){
 	$("#email").bind('input propertychange', function() {	
 		ckMail($(this).val(),$(this));
 	});
@@ -23,7 +23,7 @@ function setStyle(obj,code){
 //验证邮箱地址
 function ckMail(mail,obj){
 //正则表达式
-var reg = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+var reg = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+$/;
 //过滤（可选）
 var filter = ['qq.com','163.com','outlook.com','sina.com'];
 filter=filter.sort();
