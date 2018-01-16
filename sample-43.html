@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>格栅嵌套</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<style>
+	.b-intro{
+		border-left: solid 1px #CCCCCC;
+		text-indent: 2em;
+		height: 100%;
+		overflow: hidden;
+	}
+	.b-rows{
+		border: #CCCCCC solid 1px;
+		height: 100px;
+		margin: 1em;
+		border-radius: 10px;
+		box-shadow: 1px 2px 2px #CCCCCC;
+		overflow: hidden;
+		
+	}
+	.b-avatar{
+		width: 100px;
+		height: 100%;
+		float: left;
+	}
+</style>
+</head>
+<body>
+<!--Copyright By Sunplace-->
+<div style="width:100%;">
+ <div class="row">
+  <div class="col-sm-4">
+  	<div class="row b-rows">
+  	<div class="b-avatar" style="background: url(imgs/8/img0.jpg);background-size: cover;"><a href="http://jsunplace.com" target="_blank" style="display: block;height: 100%;"></a></div>
+  	<div class="b-intro"><h4>卡库伊2.0~</h4><p>@Sunplace</p></div>
+  	</div>  	
+  </div>
+  <div class="col-sm-4"><div class="row b-rows">
+  	<div class="b-avatar" style="background: url(imgs/8/img1.jpg);background-size: cover;"><a href="/" target="_blank" style="display: block;height: 100%;"></a></div>
+  	<div class="b-intro"><h4>随笔</h4><p>@Sunplace</p></div>
+  	</div>  </div>
+  <div class="col-sm-4"><div class="row b-rows">
+  	<div class="b-avatar" style="background: url(imgs/8/img2.jpg);background-size: cover;"><a href="#" style="display: block;height: 100%;"></a></div>
+  	<div class="b-intro"><h4>XXX</h4><p>XXXXXXX</p></div>
+  	</div>  </div> 
+</div>
+</div>
+<script>
+$(function(){
+	$(".b-intro").on(function(){
+		var w = $(this).width();
+		alert(w);
+		$(this).width(w-100);
+	});
+})
+</script>
+</body>
+</html>
