@@ -11,8 +11,7 @@
 <body>
 <script src="js/jquery-3.1.1.min.js"></script>
 <div class="desc">
- <form action="http://www.jsunplace.com/demo/inc/form.php" method="post">
-  <p>
+   <p>
     <label>
       <input type="checkbox" name="CheckboxGroup1" value="Value1" id="CheckboxGroup1_0" class="ckbox">
       Checkbox1</label>
@@ -40,8 +39,6 @@
     <input id="all" class="op" type="button" value="全选">
     <input id="nothing" class="op"  type="button" value="全不选">
     <input id="opposite" class="op"  type="button" value="反选">
-    <input class="op" style="background:#17B9DB;color: #fff;"  type="submit" value="确定">
-</form>
 <ol>
 <li>JQuery1.6版本之前（不包括1.6版本）判断checkbox是否被选中用的是attr()方法；</li>
 <li>JQuery1.6版本之后Jquery中新引入了prop()方法，此时再用attr()方法判断checkbox的状态则会返回undefined，若有设置checked属性为true，则会返回checked而不是true。</li>
