@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CheckBox组的操作</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<style>
+	.op{padding:10px;background:#fff;border: none; cursor: pointer;}
+</style>
+</head>
+<body>
+<script src="js/jquery-3.1.1.min.js"></script>
+<div class="desc">
+ <form action="http://www.jsunplace.com/demo/inc/form.php" method="post">
+  <p>
+    <label>
+      <input type="checkbox" name="CheckboxGroup1" value="Value1" id="CheckboxGroup1_0" class="ckbox">
+      Checkbox1</label>
+    <br>
+     <label>
+      <input type="checkbox" name="CheckboxGroup1" value="Value2" id="CheckboxGroup1_1" class="ckbox">
+      Checkbox2</label>
+    <br>
+
+   <label>
+      <input type="checkbox" name="CheckboxGroup1" value="Value3" id="CheckboxGroup1_2" class="ckbox">
+      Checkbox3</label>
+    <br>
+
+   <label>
+      <input type="checkbox" name="CheckboxGroup1" value="Value4" id="CheckboxGroup1_3" class="ckbox">
+      Checkbox4</label>
+    <br>
+
+   <label>
+      <input type="checkbox" name="CheckboxGroup1" value="Value5" id="CheckboxGroup1_4" class="ckbox">
+      Checkbox5</label>
+    <br>
+    </p>
+    <input id="all" class="op" type="button" value="全选">
+    <input id="nothing" class="op"  type="button" value="全不选">
+    <input id="opposite" class="op"  type="button" value="反选">
+    <input class="op" style="background:#17B9DB;color: #fff;"  type="submit" value="确定">
+</form>
+<ol>
+<li>JQuery1.6版本之前（不包括1.6版本）判断checkbox是否被选中用的是attr()方法；</li>
+<li>JQuery1.6版本之后Jquery中新引入了prop()方法，此时再用attr()方法判断checkbox的状态则会返回undefined，若有设置checked属性为true，则会返回checked而不是true。</li>
+</ol>
+</div>
+
+
+			<script>$(function(){
+			//全选
+			$("#all").click(function(){
+				$("input[id^=CheckboxGroup1_]").prop("checked",true);
+			});
+			//全不选
+			$("#nothing").click(function(){
+				$("input[id^=CheckboxGroup1_]").prop("checked",false);
+			});
+			//反选
+			$("#opposite").click(function(){
+				$("input[name='CheckboxGroup1']").each(function(index,ele) {
+					if($(this).is(":checked"))
+						{                         
+							$(this).prop("checked",false);
+						}
+					else
+						{
+							$(this).prop("checked",true);
+						}
+				});
+			});
+		});</script>
+</body>
+</html>
