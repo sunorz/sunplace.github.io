@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>相对位置</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<style>
+	input{padding:10px;background:#fff;border: none; cursor: pointer;}
+	i{color:#fff;background: red;}
+	#sample{background: #71B9E7;color: #fff;}
+	#code{background: #484848;color: #fff;padding: 1em;border-radius: 5px;}
+</style>
+<script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<!--Copyright By Sunplace-->
+<div class="desc">
+<div id="sample">Apple</div>
+<p style="line-height: 4;">
+  <input type="button" name="button" id="btn0" value="还原">
+  <input type="button" name="button" id="btn1" value="before">
+  <input type="button" name="button" id="btn2" value="after">
+  <input type="button" name="button" id="btn3" value="prepend">
+  <input type="button" name="button" id="btn4" value="prependTo">
+  <input type="button" name="button" id="btn5" value="append">
+  <input type="button" name="button" id="btn6" value="appendTo">
+  <input type="button" name="button" id="btn7" value="insertBefore">
+  <input type="button" name="button" id="btn8" value="insertAfter">
+</p>
+<div id="code">&lt;div&gt;Apple&lt;/div&gt;</div>
+</div>
+  <script>
+	function reset(){$("i").remove();$("#code").text('<div>Apple</div>');}
+	$("#btn0").click(function(){reset()});
+	$("#btn1").click(function(){reset();$("#sample").before('<i>before</i>');$("#code").html('&lt;i&gt;before&lt;/i&gt;<br/>&lt;div&gt;Apple&lt;/div&gt;');});
+	$("#btn2").click(function(){reset();$("#sample").after('<i>after</i>');$("#code").html('&lt;div&gt;Apple&lt;/div&gt;<br/>&lt;i&gt;after&lt;/i&gt;');});
+	$("#btn3").click(function(){reset();$("#sample").prepend('<i>prepend</i>');$("#code").html('&lt;div&gt;&lt;i&gt;prepend&lt;/i&gt;Apple&lt;/div&gt;');});
+	$("#btn4").click(function(){reset();$('<i>prependTo</i>').prependTo("#sample");$("#code").html('&lt;div&gt;&lt;i&gt;prependTo&lt;/i&gt;Apple&lt;/div&gt;');});
+	$("#btn5").click(function(){reset();$("#sample").append('<i>append</i>');$("#code").html('&lt;div&gt;Apple&lt;i&gt;append&lt;/i&gt;&lt;/div&gt;');});
+	$("#btn6").click(function(){reset();$('<i>appendTo</i>').appendTo("#sample");$("#code").html('&lt;div&gt;Apple&lt;i&gt;appendTo&lt;/i&gt;&lt;/div&gt;');});
+	$("#btn7").click(function(){reset();$('<i>insertBefore</i>').insertBefore("#sample");$("#code").html('&lt;i&gt;insertBefore&lt;/i&gt;<br/>&lt;div&gt;Apple&lt;/div&gt;');});
+	$("#btn8").click(function(){reset();$('<i>insertAfter</i>').insertAfter("#sample");$("#code").html('&lt;div&gt;Apple&lt;/div&gt;<br/>&lt;i&gt;insertAfter&lt;/i&gt;');});
+  </script>
+</body>
+</html>
