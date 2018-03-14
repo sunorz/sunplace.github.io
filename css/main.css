@@ -19,11 +19,4 @@ a:hover{color:red;}
 .s5{background-color:#8db0d7;}
 .s6{background-color:#6f427b;}
 .s7{background-color:#509F25;}
-.s8{
-	filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=green,endcolorstr=blue,gradientType=0);
-    -ms-filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=green,endcolorstr=blue,gradientType=0);/*IE8*/	
-    background:red; /* 一些不支持背景渐变的浏览器 */  
-    background:-moz-linear-gradient(top, green, rgba(0, 0, 255, 0.5));  
-    background:-webkit-gradient(linear, 0 0, 0 bottom, from(green), to(rgba(0, 0, 255, 0.5)));  
-    background:-o-linear-gradient(top, green, rgba(0, 0, 255, 0.5)); 
-}
+.s8{background-color:#3CC5AA;}
