@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>box-shadow</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/39/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-3.1.1.min.js"></script>
+<style>
+	#top{
+		background: #3ec9c3;height: 64px;width: 64px;margin: 1em;
+		box-shadow: 0px -3px 3px rgba(0,0,0,0.5);
+	}
+	#topr{
+		background: #3ec9c3;height: 64px;width: 64px;margin: 1em;
+		box-shadow: 3px -3px 3px rgba(0,0,0,0.5);
+	}
+	#topn{
+		background: #3ec9c3;height: 64px;width: 64px;margin: 1em;
+		box-shadow: 0px -3px 3px -3px rgba(0,0,0,0.5);
+	}
+	#topin{
+		background: #3ec9c3;height: 64px;width: 64px;margin: 1em;
+		box-shadow: 0px -3px 3px rgba(0,0,0,0.5) inset;
+	}
+	#lr{
+		background: #3ec9c3;height: 64px;width: 64px;margin: 1em;
+		box-shadow: -3px 0px 3px rgba(0,0,0,0.5),3px 0px 3px rgba(0,0,0,0.5);
+	}
+	#blr{
+		background: #3ec9c3;height: 64px;width: 64px;position: absolute;z-index: 999;left: 3px;		
+	}
+	#blrs{background:#3e3e3e;height: 67px;width: 70px;position: absolute;    filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+    
+    -webkit-filter: blur(3px); /* Chrome, Opera */
+       -moz-filter: blur(3px);
+        -ms-filter: blur(3px);    
+            filter: blur(3px);
+    
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3, MakeShadow=false); /* IE6~IE9 */}
+	pre{margin-left: 2em;}
+</style>
+</head>
+<body>
+<!--Copyright By Sunplace-->
+<div class="desc">
+1.方向
+<i>[offsetRight|-offsetLeft] [offsetButtom|-offsetTop] [blur] [color]</i>
+<div id="top"></div>
+<pre class="codeblock">box-shadow: 0px -3px 3px rgba(0,0,0,0.5);</pre>
+<div id="topr"></div>
+<pre class="codeblock">box-shadow: 3px -3px 3px rgba(0,0,0,0.5);</pre>
+<div id="lr"></div>
+<pre class="codeblock">box-shadow: -3px 0px 3px rgba(0,0,0,0.5),3px 0px 3px rgba(0,0,0,0.5);</pre>
+2.距离
+<i>[offsetRight|-offsetLeft] [offsetButtom|-offsetTop] [blur] [size] [color]</i>
+<div id="topn"></div>
+<pre class="codeblock">box-shadow: 0px -3px 3px -3px -3px rgba(0,0,0,0.5);</pre>
+3.内阴影
+<i>[offsetRight|-offsetLeft] [offsetButtom|-offsetTop] [blur] [size] [color] inset</i>
+<div id="topin"></div>
+<pre class="codeblock">box-shadow: 0px -3px 3px -3px rgba(0,0,0,0.5) inset;</pre>
+4.三边阴影（非box-shadow）
+<div style="margin: 1em;position: relative;height: 70px; width: 70px;"><div id="blr"></div>
+<div id="blrs"></div></div>
+</div>
+<script src="js/39/main.js"></script>
+</body>
+</html>
