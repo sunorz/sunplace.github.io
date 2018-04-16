@@ -1,0 +1,6 @@
+body{color:#fff;}
+	.lfbar{position: absolute;width:30%;background: #3ec9c3;margin-top: 1em;left: 0;top: 0;}
+	.lfbar div{height: 1em;line-height: 1em;padding: 8px;cursor: pointer;}
+	.lfbar div:hover,.cur{background: #b0cd08;}
+	.content{position: absolute;width:70%;right: 0;top: 0;background: #b0cd08;margin-top: 1em;}
+	.content div{min-height: 300px;padding: 2em;display: none;}
