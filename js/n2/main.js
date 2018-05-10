@@ -23,7 +23,7 @@ function setStyle(obj,code){
 //验证邮箱地址
 function ckMail(mail,obj){
 //正则表达式
-var reg = /^[A-Za-zd]+([-_.][A-Za-zd]+)*@([A-Za-zd]+[-.])+[A-Za-zd]{2,5}$/; 
+var reg = /^[A-Za-z0-9]+([-_.][A-Za-z0-9]+)*@([A-Za-z0-9]+[-.])+[A-Za-zd]{2,5}$/; 
 //过滤（可选）
 var filter = ['qq.com','163.com','outlook.com','sina.com'];
 filter=filter.sort();
