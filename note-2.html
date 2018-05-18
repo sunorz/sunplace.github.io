@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>正则验证</title>
+<link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link href="fa/css/font-awesome.min.css" rel="stylesheet">
 <style>	
@@ -29,11 +30,14 @@
   <i class="fa fa-filter fa-2x form-control-feedback" aria-hidden="true"></i>
 </div>
 </form>
+<br/>
+<code>/^[A-Za-z0-9]+([-_.][A-Za-z0-9]+)*@([A-Za-z0-9]+[-.])+[A-Za-zd]{2,6}$/</code>
 <pre>//过滤（可选,已启用）
 var filter = ['qq.com','163.com','outlook.com','sina.com'];
 //能过滤邮件域名后缀（可选）
 var filter = ['.com','.cn','.net','.org'];</pre>
 </div>
 </div>
+<div class="log">更新内容：<br><span>1.1</span>&nbsp;at&nbsp;May.18th,2018&nbsp;&nbsp;#考虑到<em>.expert</em>域名。</div>
 </body>
 </html>
