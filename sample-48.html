@@ -24,12 +24,12 @@ $(function(){
 					$(xml).find("Public").each(function(){
 						var tarid = $(this).children("tarid").text();   //获取tarid节点内容
 						var content = $(this).children("con").text();   //获取con节点内容
-				$('[id^=ts]').each(function(index,ele){
-			if(ele.attr("id")==tarid)
-				{
-					ele.text(content);
-				}
-		});
+//						$('[id^=ts]').each(function(index,ele){
+//							if(ele.attr("id")==tarid)
+//							{
+//								ele.text(content);
+//							}
+//						});
 				        });
 	
 					});
