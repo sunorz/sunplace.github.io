@@ -24,7 +24,7 @@ $(function(){
 					$(xml).find("Public").each(function(){
 						var id = $(this).children("tarid").text();   //获取tarid节点内容
 						var content = $(this).children("con").text();   //获取con节点内容
-						console.log(content);
+						//console.log(content);
 						$(document).each(function(){
 				        if($(".trans").attr("id")==id){
 						   
