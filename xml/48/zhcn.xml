@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Doc>
+	<Public>
+		<tarid>ts1</tarid>
+		<con>标题</con>
+	</Public>
+		<Public>
+		<tarid>ts2</tarid>
+		<con>内容</con>
+	</Public>
+</Doc>

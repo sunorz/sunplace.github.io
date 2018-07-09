@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>多语言切换</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<input class="trans" id="zhcn" type="button" value="中文">
+<input class="trans" id="enus" type="button" value="English">
+<h1 id="ts1"></h1>
+<p id="ts2"></p>
+<script>
+$(function(){
+	$(".trans").click(function(e){
+		var trid = $(this).attr("id"); //获取按钮id
+		
+		$.ajax({
+				url:"xml/48/"+trid+".xml", //配置文件路径
+			    type:"POST",
+			    dataType:"xml",
+			    success:function(xml){
+					$(xml).find("Public").each(function(){
+						var id = $(this).children("tarid").text();   //获取tarid节点内容
+						var content = $(this).children("con").text();   //获取com节点内容
+						$(document).each(function(){
+				        if($(".trans").attr("id")==id){
+						   console.log(content);
+						   $("#"+id).text(content);
+					    }
+				 });
+					});
+				},
+			    error:function(){
+					alert("加载失败");
+				}
+			});
+		
+	});
+});
+</script>
+</body>
+</html>
