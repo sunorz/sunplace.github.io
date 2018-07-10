@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>读取XML</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-3.1.1.min.js"></script>
+<style>
+	a{text-decoration: underline;}
+	input{padding: 10px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+		margin: 1em;}
+	.output{background:#fff;color: #000;padding: 1em;}
+</style>
+</head>
+<body>
+<div class="desc">读取<a href="xml/49/lists.xml" target="_blank">lists.xml</a>的内容。
+<div class="output">请点击以下按钮。</div>
+<input id="btn1" type="button" value="一次读取">
+<input id="btn2" type="button" value="循环读取[title]">
+<input id="btn3" type="button" value="读取[category='WEB']的作者">
+<input id="btn4" type="button" value="读取第2本书的价格">
+<input id="btn5" type="button" value="循环读取[lang]">
+</div>
+	<script src="js/49/main.js"></script>
+</body>
+</html>
