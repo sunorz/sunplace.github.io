@@ -12,17 +12,20 @@
     background: #fff;
     border: none;
     cursor: pointer;
-		margin: 1em;}
-	.output{background:#fff;color: #000;padding: 1em;}
+		margin: 0.5em 0 0.5em 0;}
+	.output{background:#fff;color: #000;padding: 1em;max-height: 300px;overflow-y: scroll;}
 </style>
 </head>
 <body>
-<div class="desc">操作<a href="js/50/lists.json" target="_blank">lists.json</a>的内容。
+<div class="desc">临时操作<a href="js/50/lists.json" target="_blank">lists.json</a>的内容（不能保存到文件）。
 <div class="output">请点击以下按钮。</div>
 <input id="btn1" type="button" value="一次读取">
 <input id="btn2" type="button" value="循环读取[title]">
 <input id="btn3" type="button" value="读取第2本书的价格">
-<input id="btn4" type="button" value="第3本价格打8折*">
+<input id="btn4" type="button" value="第3本价格打8折">
+<input id="btn5" type="button" value="添加一本书*">
+<input id="btn6" type="button" value="剔除最后一本书*">
+<p>* 请求一次，操作临时数据。</p>
 </div>
 	<script src="js/50/main.js"></script>
 </body>
