@@ -19,18 +19,16 @@ $(function(){
 		
 	});
 	$("#btn3").click(function(){
-		$(".output").text("");
 		$.get("xml/49/lists.xml",function(xml){  
 			var author = $(xml).find("book[category='WEB']").children("author").text();
-			$(".output").append("author:"+author);
+			$(".output").text("author:"+author);
 		});
 		
 	});
 	$("#btn4").click(function(){
-		$(".output").text("");
 		$.get("xml/49/lists.xml",function(xml){  
 			var price = $(xml).find("book:eq(1)").children("price").text();
-			$(".output").append("￥"+price);
+			$(".output").text("￥"+price);
 		});
 		
 	});
