@@ -6,21 +6,39 @@
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <link href="css/13/main.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
+<script src="js/jquery-3.1.1.min.js"></script>
 <div class="bubble">
 	<!--显示时间-->		
-		<div class="posttime">2016年12月24日</div> 
+		<div class="posttime">2016年12月24日</div> 			
    <!--对话框开始-->   
-    <div class="demo clearfix">
-            <span class="triangle right"></span>
-            <div class="article">今晚平安夜有什么活动？</div>
-        </div>
+		<div class="demo clearfix">
+				<span class="triangle"></span>
+				<div class="article"><div class="node">&nbsp;</div>因供水管道施工，计划从2018年7月13日晚上11点至14日晚上7点30分，磨滩路、柳石路柳州威立雅水务有限公司新兴加压站以南路段停水；柳江区、旧机场片区、城站路、柳邕路、飞鹅路、荣军路降压供水（地势高或高楼层客户水小甚至无水）。实际复水时间视当日施工情况有可能提前或延后，请您至少提前3小时做好蓄水准备。</div>
+		</div>
+       	<div class="demo clearfix">
+				<img src="imgs/8/img4.jpg">
+		</div>
         <div class="demo clearfix fr">
-            <span class="triangle right"></span>
-            <div class="article">到时联系你。</div>
+            <span class="triangle"></span>
+            <div class="article">了解。</div>
         </div>  
          <!--对话框结束-->       
 </div>
+<div class="log">更新内容：<br><span>1.1</span>&nbsp;at&nbsp;Jul.13th,2018&nbsp;&nbsp;#删除了多余的class。&nbsp;&nbsp;#调整小三角的位置。&nbsp;&nbsp;#调整行间距。&nbsp;&nbsp;#加入图片。&nbsp;&nbsp;#调整自适应宽度。</div>
+<script>
+//用来定位小三角
+	$(function(){
+		var heighte = $(".node").height();
+		$(".demo").each(function(){
+			if($(".article").height()>heighte)
+				{
+					$(this).children(".article").css('line-height',heighte+10+"px");
+					$(this).children(".triangle").css('margin-top',heighte-13+"px");
+				}
+
+		});
+	});
+</script>
 </body>
 </html>

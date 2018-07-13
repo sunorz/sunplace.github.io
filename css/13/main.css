@@ -1,15 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
 .bubble { margin:0px auto; }
+img{border-radius: 5px;max-width: 40%;}
 .demo {
     margin-bottom:20px;
     padding-left:50px;
     position:relative;
 }
 	.triangle {
-		position:absolute;
-		top:50%;
-		margin-top:-8px;
+		position:absolute;		
 		left:42px;
 		display:block;
 		width:0;
@@ -27,12 +26,12 @@
 		float:left;
 		color:#000; 
 		display:inline-block; 
-		*display:inline; zoom:1; 
-		padding:5px 10px; 
-		
+		*display:inline; 
+		zoom:1; 
 		border-radius:5px;  
 		background-color: #fff;
-	    line-height: 2; max-width: 40%;	
+        max-width: 40%;	
+		padding:0 5px 0 10px;
 	}
 		/* Remove Float */
 
@@ -50,10 +49,17 @@
 		border-bottom:8px solid #cce8cf ;
 		border-top:8px solid #cce8cf;
 		border-right:none;
-		border-left:8px solid #40FB2A;
+		border-left:8px solid #9EEA6A;
 	}
 
 	.fr .article { 
-		float:right; line-height: 2;background-color:#40FB2A;
+		float:right; line-height: 2;background-color:#9EEA6A;
 	}
 	.posttime{border-radius: 5px; background-color:#D4D4D4;color: white; display: table; padding: 5px;font-size: 11px; margin: 10px auto;}
+.node{width: 0;display: inline-block;color: transparent;z-index: -1;}
+@media screen and (max-width:600px){
+	.demo .article{
+		max-width: 75%;
+	}
+	img{max-width: 75%;}
+}
