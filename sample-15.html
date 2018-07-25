@@ -2,23 +2,77 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>显示图片的任一部分</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>雪碧图</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <style>
 /*统一设置*/
-a{display: block;width: 64px; height: 64px;background:#585858 url(imgs/15/emoticons.png) no-repeat;margin: 10px;}
+.alh{background:url(imgs/15/pokemon-h-192x64.png) no-repeat;}
+.ash{background:url(imgs/15/pokemon-h-192x64.png) no-repeat;}
+.a64{width:64px;height:64px;}
+.a32{width:32px;height:32px;}
+table{table-layout:fixed;}
+td{text-align:center;vertical-align: middle !important;}
 /*分别设置*/
-.em_1{background-position:0px 0px;}
-.em_2{background-position:-69px 0px;}
-img{background: #585858;}
+.icon_2{background-position:50% 0%;}
+.icon_3{background-position:100% 0%;}
+.icon_4{background-size:300%;}
+.icon_5{background-position:50% 0%;background-size:300%;}
+.icon_6{background-position:100% 0%;background-size:300%;}
+img{background: #ffffff;}
+#wrapper{margin:1em auto;width:90%;}
 </style>
 </head>
 <body>
 <!--Copyright By Sunplace-->
-<div class="desc">以下两张图是一张图的不同部分。原图：<br/><img src="imgs/15/emoticons.png"/></div>
-<div class="desc">图1</div>
-<a class="em_1" href="#"></a>
-<div class="desc">图2</div>
-<a class="em_2" href="#"></a>		
+<div id="wrapper"><h3>情况1：子图为正方形，且尺寸相同。</h3>
+<div><img src="imgs/15/pokemon-h-192x64.png"></div>
+子图尺寸：64*64<br>
+<table class="table table-striped table-bordered">
+	<tbody>
+		<tr>
+			<td>显示位置I</td>
+			<td>&nbsp;</td>
+			<td><div class="alh a64"></div></td>
+		</tr>
+		<tr>
+			<td>显示位置II</td>
+			<td><code>background-position:50% 0%;</code></td>
+			<td><div class="alh a64 icon_2"></div></td>
+		</tr>
+		<tr>
+			<td>显示位置III</td>
+			<td><code>background-position:50% 100%;</code></td>
+			<td><div class="alh a64 icon_3"></div></td>
+		</tr>
+	</tbody>
+</table>
+<h3>情况2：在子图为64*64的情况下，改为显示32*32的图标。</h3>
+<div><img src="imgs/15/pokemon-h-192x64.png"></div>
+子图尺寸：64*64<br>
+<table class="table table-striped table-bordered">
+	<tbody>
+		<tr>
+			<td>显示位置I</td>
+			<td><code>background-size:300%;</code></td>
+			<td><div class="alh a32 icon_4"></div></td>
+		</tr>
+		<tr>
+			<td>显示位置II</td>
+			<td><code>background-position:50% 0%;background-size:300%;</code></td>
+			<td><div class="alh a32 icon_5"></div></td>
+		</tr>
+		<tr>
+			<td>显示位置III</td>
+			<td><code>background-position:100% 0%;background-size:300%;</code></td>
+			<td><div class="alh a32 icon_6"></div></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<div class="log">更新内容：<br/><span>1.1</span>&nbsp;at&nbsp;Jul.25th,2018&nbsp;&nbsp;#改为百分比显示。&nbsp;&nbsp;#修改了原图。</div>
 </body>
 </html>
