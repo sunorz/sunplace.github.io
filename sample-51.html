@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>background-position</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<style>
+#wrapper{margin:1em auto;width:90%;}
+.bg{background:#7D7D7D url(imgs/51/192x64.gif) no-repeat;margin-bottom: 1em;border: solid 1px #fff;color: #fff;}
+.bgn{width: 600px;height: 400px;}
+.bgs{width: 100px;height: 24px;}
+.sp1{background-position: 10% 20%;}
+.sp2{background-position: 20% 10%;}
+</style>
+</head>
+<body>
+<!--Copyright By Sunplace-->
+<div id="wrapper">
+<p><strong>background-position:[x偏移] [y偏移];</strong><br>
+  (0,0)位于容器的左上角<br/>
+  x&gt;0，背景左移<br>
+  x&lt;0,背景右移<br>
+  y&gt;0,背景上移<br>
+  y&lt;0，背景下移
+  <br>
+  百分比取反。
+</p>
+<div class="bg bgn sp1"></div>
+x:(600-192)*(-1)*10%=-40.8<br/>y:(400-64)*(-1)*20%=-67.2<br/>background-position:-40.8px -67.2px;
+<div class="bg bgs sp2"></div>
+<div><img src="imgs/51/bg_bgs_sp2.gif"></div>
+x:(100-192)*(-1)*20%=18.4<br/>y:(24-64)*(-1)*10%=4<br/>background-position:18.4px 4px;
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(function(){
+	$(".bg").each(function(){
+		var x = $(this).css("background-position-x");
+		var y = $(this).css("background-position-y");
+		$(this).html("("+x+","+y+")");
+	});
+});
+</script>
+</body>
+</html>
