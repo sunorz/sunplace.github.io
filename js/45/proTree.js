@@ -55,7 +55,16 @@
 							"<span id='" + item.id + "'><i class='fa fa-folder' style='font-size:130%;color:#7fb9f2;'></i>" + item.name + "</span>"
 						var _ul = self.proHTML(item.child);
 						lihtml += _ul + "</li>";
-					} else {
+					} 
+					//当文件夹下有内容却不想一一列出时&文件夹为空时
+					else if(item.name.indexOf("*")>-1){
+						var fname=item.name.substr(1);
+							lihtml += "<span id='" + item.id + "'><i class='fa fa-folder' style='font-size:130%;color:#7fb9f2;'></i>" + fname + "</span>"
+							lihtml +="</li>";
+							
+							}
+					
+					else {
 						lihtml += "<i class='" + self.simIcon + "' style='color:#959595;'></i>" +
 							"<span id='" + item.id + "'>" + item.name + "</span>";
 					}

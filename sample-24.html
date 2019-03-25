@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bootstrap初始化</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="fa/css/font-awesome.min.css"/>
 <style>
 /*自定义样式*/
 body{
@@ -25,6 +26,28 @@ body{
 	background-color:#4D4D4D;
 	cursor: pointer;
 	}
+* {
+		padding: 0;
+		margin: 0;
+	}
+	
+	ul li {
+		list-style-type: none;
+	}
+	
+
+	ul {
+		margin-left: 20px;
+		/*border: 1px solid blue;*/
+	}
+	
+	.menuUl li {
+		margin: 10px 0;
+	}
+	
+	.menuUl li i { margin-right: 10px; top: 0px;}
+	.innerUl{border:solid 1px #eaeaea;display: inline-block;padding-right: 20px;background:#FFFED1;}
+	.clearfix{height: 1em;}
 </style>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -34,9 +57,11 @@ body{
 <div class="container">
 <h3>Bootstrap本地（3.3.7）：</h3>
 <blockquote>
-<p>http://getbootstrap.com/dist/css/bootstrap.min.css</p>
-<p>https://code.jquery.com/jquery-3.1.1.min.js</p>
-<p>http://getbootstrap.com/dist/js/bootstrap.min.js</p>
+<div class="innerUl"></div>
+<script src="js/45/proTree.js"></script>
+<script src="js/24/main.js"></script>
+<div class="clearfix"></div>
+<code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.min.css&quot;&gt;<br>&lt;script src=&quot;js/jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;<br>&lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;</code>
 </blockquote>
 <h3>Bootstrap百度（3.3.0）：</h3>
 <blockquote>
@@ -51,6 +76,7 @@ body{
 <span class="glyphicon glyphicon-menu-up"></span>
 </div>
 <div class="log">更新内容：<br/><span>1.1</span>&nbsp;at&nbsp;May.18th,2017&nbsp;&nbsp;#调整顺序。<br/>
-<span>1.2</span>&nbsp;at&nbsp;Mar.23rd,2018&nbsp;&nbsp;#本地引用更新至3.3.7版，并引入glyphicon字库图标。</div>
+<span>1.2</span>&nbsp;at&nbsp;Mar.23rd,2018&nbsp;&nbsp;#本地引用更新至3.3.7版，并引入glyphicon字库图标。<br/>
+<span>1.3</span>&nbsp;at&nbsp;Mar.25rd,2019&nbsp;&nbsp;#更新本地连接（<del>getbootstrap.com</del>）。</div>
 </body>
 </html>
