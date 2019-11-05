@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无缝滚动多个元素</title>
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<style>
+		ul,li{margin:0;padding: 0;list-style-type: none;}		
+		#content li{width: 291.25px;height: 194.16px; background: #ccc;margin-left: 15px;float: left;background-position: center;background-size: cover;}
+		#next,#prev{font-size: 80px !important;color:rgba(255,0,4,0.3);cursor: pointer;}
+		#prev:hover,#next:hover{color: rgba(255,0,4,1);}
+		#content{height: 200px;position: absolute;z-index: 999;width: 1000000px;}
+	</style>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	</head>
+
+<body>
+	<div id="content2-2" style="margin: 20px auto;width: 1290px;position: relative;">
+		<div id="prev" style="position: absolute;top:0px;left: -20px;width: 40px;height: 200px;line-height: 200px;text-align: center;">&lt;</div>
+		<div id="next" style="position: absolute;top:0px;right: 0px;width: 40px;height: 200px;line-height: 200px;text-align: center;">&gt;</div>
+		<div id="wrap" style="margin: 0 auto;width: 1210px;overflow: hidden;position: relative;height: 200px;"><ul id="content"></ul></div>
+	</div>
+	<script>
+	var gallery = {
+		photos:[
+			{"url":"i_f1.png"},{"url":"i_f2.png"},{"url":"i_f3.png"},{"url":"i_f4.png"},{"url":"i_f5.png"},{"url":"i_f6.png"},{"url":"i_f7.png"},{"url":"i_f8.png"},{"url":"i_f9.png"}
+		]
+		
+	};
+		$(function(){
+			var index=0;
+			index++;
+			var len = gallery.photos.length;
+			$("#content").css('left','-15px');
+			for(var i=0;i<len;i++){
+				$("#content").append('<li>'+gallery.photos[i].url+'</li>');
+			}
+			function start(){
+				if(cindex>0){return false;}
+				cindex++;
+				$("#content").animate({'left':$("#content").position().left-1225},5000,function(){
+					for(var j=1;j<5;j++){
+						$("#content li").first().appendTo($("#content"));
+					}
+					$("#content").css('left','-15px');
+					cindex=0;
+				});
+
+			}
+			var cindex=0;
+			function start_r(){
+				if(cindex>0){return false;}
+					for(var j=1;j<5;j++){
+						$("#content li").last().prependTo($("#content"));
+					}
+				cindex++;
+				$("#content").css('left','-1225px');
+				$("#content").animate({'left':$("#content").position().left+1225},5000,function(){
+						cindex=0;
+				});
+			}
+			id=setInterval(start,10000);
+			$("#prev").click(function(){
+				start();
+			});
+			$("#content2-2").mouseover(function(){
+				clearInterval(id);
+			});
+			
+			$("#content2-2").mouseleave(function(){
+				id=setInterval(start,10000);
+			});
+			$("#next").click(function(){
+				start_r();
+			});
+			
+		});
+
+</script>
+
+</body>
+</html>
