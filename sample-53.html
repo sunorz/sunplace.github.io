@@ -30,33 +30,34 @@
 		$(function(){
 			var index=0;
 			index++;
+			var lock=0;
 			var len = gallery.photos.length;
 			$("#content").css('left','-15px');
 			for(var i=0;i<len;i++){
 				$("#content").append('<li>'+gallery.photos[i].url+'</li>');
 			}
 			function start(){
-				if(cindex>0){return false;}
-				cindex++;
+				if(lock>0){return false;}
+				lock=1;
 				$("#content").animate({'left':$("#content").position().left-1225},5000,function(){
 					for(var j=1;j<5;j++){
 						$("#content li").first().appendTo($("#content"));
 					}
 					$("#content").css('left','-15px');
-					cindex=0;
+					lock=0;
 				});
 
 			}
-			var cindex=0;
+
 			function start_r(){
-				if(cindex>0){return false;}
+				if(lock>0){return false;}
 					for(var j=1;j<5;j++){
 						$("#content li").last().prependTo($("#content"));
 					}
-				cindex++;
+				lock=1;
 				$("#content").css('left','-1225px');
 				$("#content").animate({'left':$("#content").position().left+1225},5000,function(){
-						cindex=0;
+						lock=0;
 				});
 			}
 			id=setInterval(start,10000);
@@ -77,6 +78,6 @@
 		});
 
 </script>
-
+<div class="log">更新内容：<br/><span>1.1</span>&nbsp;at&nbsp;Nov.8th,2019&nbsp;&nbsp;#把控制的自增元素，改为0/1锁。</div>
 </body>
 </html>
