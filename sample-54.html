@@ -5,13 +5,16 @@
 <title>外挂字幕</title>
 	<style>
 		::cue {background:rgba(0,0,0,.5); color: #fff;font-size: 20px;}
+		video{width:100%;}
 	</style>
 </head>
 <body>
-<video width="720" height="480" controls src="https://kkii.org/wp-content/uploads/2019/12/Wildlife.mp4" type="video/mp4">
+	<div style="max-width: 720px;width: 90%;margin: 0 auto;">
+<video controls src="https://kkii.org/wp-content/uploads/2019/12/Wildlife.mp4" type="video/mp4">
 <track src="54/en-us.vtt" srclang="en-us"  kind="subtitles" label="English" default>
 <track src="54/zh-cn.vtt" srclang="zh-cn"  kind="subtitles" label="Chinese(Simplified)">
 Your browser does not support the video tag.
 </video>
+		</div>
 </body>
 </html>
