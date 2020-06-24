@@ -36,8 +36,8 @@
 .addtion3 a:hover{text-decoration:underline;color:#fff;}
 .addtion2{bottom: 0;}
 .ptext{
-	vertical-align:middle;
-	display:table-cell;
+	vertical-align:middle;	
+    text-align: center;
 	}
 /*JQuery和CSS两种方式来居中文本*/
 #me0,#me2{
@@ -64,8 +64,8 @@
 <script src="js/jquery-3.1.1.min.js"></script>
 <script>
 $(function(){
-$('.back').mouseover(function(){$(this).find('.cover').css('display','table')});
-$('.back').mouseleave(function(){$(this).find('.cover').hide()});
+$('.back').mouseover(function(){$(this).find('.cover').show();});
+$('.back').mouseleave(function(){$(this).find('.cover').hide();});
 });
 </script>
 <div id="wrap">
@@ -90,5 +90,6 @@ $('.back').mouseleave(function(){$(this).find('.cover').hide()});
 </div>
 </div>
 </div>
+    <div class="log">更新内容：<br/><span>1.1</span>&nbsp;at&nbsp;Jun.24th,2020&nbsp;&nbsp;#修复了一些定位偏差。</div>
 </body>
 </html>
